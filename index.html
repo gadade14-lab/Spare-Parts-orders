@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HI-TECH ORDER APP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#eef3ff;
+  padding:20px;
+}
+
+.container{
+  max-width:1500px;
+  margin:auto;
+}
+
+/* HEADER */
+
+.header{
+  background:linear-gradient(135deg,#004aad,#007bff);
+  padding:25px;
+  border-radius:20px;
+  color:white;
+  margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.header h1{
+  font-size:34px;
+}
+
+.header p{
+  margin-top:8px;
+  opacity:0.9;
+}
+
+.search-box{
+  margin-top:20px;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+/* MAIN */
+
+.main-layout{
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:25px;
+  align-items:start;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+/* PRODUCT ROW */
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border:2px solid transparent;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.card:hover{
+  border-color:#007bff;
+}
+
+/* LEFT SIDE */
+
+.product-left{
+  flex:1;
+}
+
+.product-name{
+  font-size:18px;
+  font-weight:600;
+  color:#003b8e;
+  margin-bottom:8px;
+}
+
+.product-price{
+  font-size:24px;
+  font-weight:700;
+  color:#28a745;
+}
+
+/* RIGHT SIDE */
+
+.product-right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* QTY */
+
+.qty-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0;
+}
+
+.qty-btn{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:8px;
+  background:#004aad;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.qty-input{
+  width:60px;
+  text-align:center;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+  font-weight:bold;
+}
+
+/* BUTTON */
+
+.add-btn{
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#ff9800;
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.add-btn:hover{
+  background:#e68900;
+}
+
+/* RIGHT PANEL */
+
+.side-panel{
+  position:sticky;
+  top:20px;
+}
+
+/* CUSTOMER DETAILS */
+
+.customer-box{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom:20px;
+}
+
+.customer-box h2{
+  color:#004aad;
+  margin-bottom:15px;
+}
+
+.customer-box input,
+.customer-box textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.customer-box textarea{
+  resize:none;
+  height:80px;
+}
+
+/* CART */
+
+.cart{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart h2{
+  color:#004aad;
+  margin-bottom:20px;
+}
+
+.cart-item{
+  border-bottom:1px solid #eee;
+  padding:15px 0;
+}
+
+.cart-item-name{
+  font-weight:600;
+}
+
+.cart-item-details{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+}
+
+.remove-btn{
+  background:red;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.total{
+  margin-top:20px;
+  font-size:28px;
+  font-weight:700;
+  color:#28a745;
+}
+
+.order-btn{
+  width:100%;
+  margin-top:20px;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:#25D366;
+  color:white;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* EMPTY */
+
+.empty{
+  text-align:center;
+  color:#777;
+  padding:30px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .main-layout{
+    grid-template-columns:1fr;
+  }
+
+  .side-panel{
+    position:relative;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .product-right{
+    width:100%;
+    justify-content:space-between;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <h1>HI-TECH ELECTRONIC PARTS</h1>
+
+    <p>Electronic Parts Ordering System</p>
+
+    <div class="search-box">
+
+      <input type="text"
+      id="searchInput"
+      placeholder="Search Products...">
+
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main-layout">
+
+    <!-- PRODUCTS -->
+
+    <div class="products" id="productList"></div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="side-panel">
+
+      <!-- CUSTOMER DETAILS -->
+
+      <div class="customer-box">
+
+        <h2>👤 Customer Details</h2>
+
+        <input type="text"
+        id="customerName"
+        placeholder="Customer Name"
+        required>
+
+        <textarea
+        id="customerAddress"
+        placeholder="Customer Address"
+        required></textarea>
+
+        <input type="text"
+        id="customerPincode"
+        placeholder="Pincode"
+        required>
+
+        <input type="text"
+        id="customerState"
+        placeholder="State"
+        required>
+
+        <input type="text"
+        id="customerMobile"
+        placeholder="Mobile Number"
+        required>
+
+      </div>
+
+      <!-- CART -->
+
+      <div class="cart">
+
+        <h2>🛒 Order Cart</h2>
+
+        <div id="cartItems">
+
+          <div class="empty">
+            No Products Added
+          </div>
+
+        </div>
+
+        <div class="total" id="total">₹0</div>
+
+        <button class="order-btn"
+        onclick="placeOrder()">
+
+          PLACE ORDER
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+/* PRODUCTS */
+
+const products = [
+
+/* SWITCHES */
+
+{name:"SPRING COUNTER",price:20},
+{name:"SPRING LOW TENSION",price:30},
+{name:"LIMIT SWITCH SHORT ROLLER",price:35},
+{name:"SPRING HIGH TENSION",price:40},
+{name:"LIMIT SWITCH LONG ROLLER",price:40},
+{name:"CAPACITOR 2.5UF",price:40},
+{name:"FRC CONNECTOR 10PIN",price:40},
+{name:"DIAPHRAGM",price:50},
+{name:"FRC CONNECTOR 20PIN",price:50},
+{name:"ROCKER SWITCH 16AMP",price:60},
+
+/* SENSORS */
+
+{name:"RESET SWITCH",price:100},
+{name:"RUBBER WHEELS BASE",price:30},
+{name:"CARBAN VANCE 28*16*3MM",price:80},
+{name:"ENCODER WHEELS",price:100},
+{name:"RUBBER WHEELS 6PCS",price:120},
+{name:"COUNTER SENSOR WITH CONNECTOR",price:130},
+{name:"ENCODER SENSOR",price:150},
+{name:"STACKER SENSOR",price:150},
+{name:"HOPPER SENSOR",price:150},
+{name:"MG SENSOR",price:350},
+
+/* DISPLAYS */
+
+{name:"TFT DISPLAY CONNECTOR 5PIN",price:20},
+{name:"MX-50i CUSTOMER DISPLAY",price:600},
+{name:"BNC DISPLAY PANEL",price:600},
+{name:"MIX VALUE CUSTOMER DISPLAY",price:700},
+{name:"SEMI VALUE LCD DISPLAY",price:700},
+{name:'TFT DISPLAY 2.8"',price:800},
+{name:'TFT DISPLAY 3.5"',price:1200},
+
+/* MOTORS */
+
+{name:"9VDC MOTOR",price:350},
+{name:"TRANSFORMER LNC",price:350},
+{name:"TRANSFORMER BNC",price:550},
+{name:"COUNTER ASSEMBLY",price:600},
+{name:"MIX VALUE IR SENSOR UP",price:600},
+{name:"MIX VALUE LENGTH SENSOR",price:800},
+{name:"MIX VALUE PCB",price:900},
+{name:"SOFTWARE UPDATE TOOL",price:900},
+{name:"SPINDLE MOTOR 25W 230V",price:1500},
+{name:"BNC MOTHER BOARD 110/230V",price:1600},
+{name:"BNC MOTHER BOARD GODREJ TYPES",price:2200},
+{name:"HOPPER MOTOR 25W 230V",price:2300},
+
+/* BELTS */
+
+{name:"RUBBER BELT LNC",price:50},
+{name:"RUBBER PAD 3.1MM",price:50},
+{name:"RUBBER PAD 3.3MM",price:60},
+{name:"AIR PIPE",price:80},
+{name:"RUBBER BELT WHITE BNC",price:130},
+{name:"UV TUBE 9W",price:150},
+{name:"UV TUBE 9W (HIGH)",price:200},
+{name:"AIR FILTER",price:200}
+
+];
+
+let cart = [];
+
+const productList = document.getElementById("productList");
+const cartItems = document.getElementById("cartItems");
+const totalBox = document.getElementById("total");
+
+/* RENDER PRODUCTS */
+
+function renderProducts(search=""){
+
+  productList.innerHTML = "";
+
+  products
+  .filter(product =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  )
+
+  .forEach((product,index)=>{
+
+    productList.innerHTML += `
+
+    <div class="card">
+
+      <!-- LEFT -->
+
+      <div class="product-left">
+
+        <div class="product-name">
+          ${product.name}
+        </div>
+
+        <div class="product-price">
+          ₹${product.price}
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="product-right">
+
+        <div class="qty-box">
+
+          <button class="qty-btn"
+          onclick="decreaseQty(${index})">-</button>
+
+          <input type="number"
+          class="qty-input"
+          id="qty${index}"
+          value="1"
+          min="1">
+
+          <button class="qty-btn"
+          onclick="increaseQty(${index})">+</button>
+
+        </div>
+
+        <button class="add-btn"
+        onclick="addToCart(${index})">
+
+          ADD
+
+        </button>
+
+      </div>
+
+    </div>
+
+    `;
+
+  });
+
+}
+
+/* QTY */
+
+function increaseQty(index){
+
+  let qty = document.getElementById(`qty${index}`);
+
+  qty.value = parseInt(qty.value) + 1;
+
+}
+
+function decreaseQty(index){
+
+  let qty = document.getElementById(`qty${index}`);
+
+  if(parseInt(qty.value) > 1){
+
+    qty.value = parseInt(qty.value) - 1;
+
+  }
+
+}
+
+/* ADD TO CART */
+
+function addToCart(index){
+
+  const product = products[index];
+
+  let qty = parseInt(
+    document.getElementById(`qty${index}`).value
+  );
+
+  const existing = cart.find(item =>
+    item.name === product.name
+  );
+
+  if(existing){
+
+    existing.qty += qty;
+
+  }else{
+
+    cart.push({
+      name:product.name,
+      price:product.price,
+      qty:qty
+    });
+
+  }
+
+  renderCart();
+
+}
+
+/* RENDER CART */
+
+function renderCart(){
+
+  cartItems.innerHTML = "";
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML = `
+      <div class="empty">
+        No Products Added
+      </div>
+    `;
+
+    totalBox.innerHTML = "₹0";
+
+    return;
+
+  }
+
+  let total = 0;
+
+  cart.forEach((item,index)=>{
+
+    let subTotal = item.price * item.qty;
+
+    total += subTotal;
+
+    cartItems.innerHTML += `
+
+      <div class="cart-item">
+
+        <div class="cart-item-name">
+          ${item.name}
+        </div>
+
+        <div class="cart-item-details">
+
+          <div>
+            Qty : ${item.qty}<br>
+            ₹${subTotal}
+          </div>
+
+          <button class="remove-btn"
+          onclick="removeItem(${index})">
+
+            Remove
+
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+  });
+
+  totalBox.innerHTML = `₹${total}`;
+
+}
+
+/* REMOVE */
+
+function removeItem(index){
+
+  cart.splice(index,1);
+
+  renderCart();
+
+}
+
+/* PLACE ORDER */
+
+function placeOrder(){
+
+  /* CUSTOMER DETAILS */
+
+  let customerName =
+  document.getElementById("customerName").value.trim();
+
+  let customerAddress =
+  document.getElementById("customerAddress").value.trim();
+
+  let customerPincode =
+  document.getElementById("customerPincode").value.trim();
+
+  let customerState =
+  document.getElementById("customerState").value.trim();
+
+  let customerMobile =
+  document.getElementById("customerMobile").value.trim();
+
+  /* VALIDATION */
+
+  if(customerName == "" ||
+     customerAddress == "" ||
+     customerPincode == "" ||
+     customerState == "" ||
+     customerMobile == ""){
+
+    alert("Please Fill Customer Details");
+
+    return;
+
+  }
+
+  /* CART CHECK */
+
+  if(cart.length === 0){
+
+    alert("Please Add Products");
+
+    return;
+
+  }
+
+  /* WHATSAPP MESSAGE */
+
+  let message =
+  "🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A";
+
+  /* CUSTOMER DETAILS */
+
+  message +=
+  "👤 CUSTOMER DETAILS%0A%0A" +
+
+  "Name : " + customerName + "%0A" +
+
+  "Address : " + customerAddress + "%0A" +
+
+  "Pincode : " + customerPincode + "%0A" +
+
+  "State : " + customerState + "%0A" +
+
+  "Mobile : " + customerMobile + "%0A%0A";
+
+  /* ORDER DETAILS */
+
+  message +=
+  "📦 ORDER DETAILS%0A%0A";
+
+  let total = 0;
+
+  cart.forEach(item=>{
+
+    let sub = item.price * item.qty;
+
+    total += sub;
+
+    message +=
+    "Product : " + item.name + "%0A" +
+    "Qty : " + item.qty + "%0A" +
+    "Price : ₹" + sub + "%0A%0A";
+
+  });
+
+  /* TOTAL */
+
+  message +=
+  "💰 TOTAL : ₹" + total;
+
+  /* YOUR WHATSAPP NUMBER */
+
+  let phone = "918208825986";
+
+  window.open(
+    `https://wa.me/${phone}?text=${message}`,
+    "_blank"
+  );
+
+}
+
+/* SEARCH */
+
+document.getElementById("searchInput")
+.addEventListener("input",function(){
+
+  renderProducts(this.value);
+
+});
+
+/* LOAD */
+
+renderProducts();
+
+</script>
+
+</body>
+</html>
