@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>HI-TECH ORDER APP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HI-TECH ELECTRONIC PARTS</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -22,7 +23,7 @@ body{
 }
 
 .container{
-  max-width:1500px;
+  max-width:1600px;
   margin:auto;
 }
 
@@ -76,7 +77,7 @@ body{
   gap:15px;
 }
 
-/* PRODUCT ROW */
+/* PRODUCT CARD */
 
 .card{
   background:white;
@@ -89,15 +90,37 @@ body{
   align-items:center;
   justify-content:space-between;
   gap:20px;
+
+  transition:0.2s;
 }
 
 .card:hover{
   border-color:#007bff;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 
 .product-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex:1;
+}
+
+/* IMAGE */
+
+.product-image img{
+  width:95px;
+  height:95px;
+  object-fit:cover;
+  border-radius:14px;
+  border:2px solid #e3e3e3;
+  background:white;
+}
+
+/* DETAILS */
+
+.product-details{
   flex:1;
 }
 
@@ -114,7 +137,7 @@ body{
   color:#28a745;
 }
 
-/* RIGHT SIDE */
+/* RIGHT */
 
 .product-right{
   display:flex;
@@ -128,7 +151,6 @@ body{
   display:flex;
   align-items:center;
   gap:8px;
-  margin:0;
 }
 
 .qty-btn{
@@ -163,21 +185,20 @@ body{
   font-size:15px;
   font-weight:600;
   cursor:pointer;
-  white-space:nowrap;
 }
 
 .add-btn:hover{
   background:#e68900;
 }
 
-/* RIGHT PANEL */
+/* SIDE PANEL */
 
 .side-panel{
   position:sticky;
   top:20px;
 }
 
-/* CUSTOMER DETAILS */
+/* CUSTOMER */
 
 .customer-box{
   background:white;
@@ -266,8 +287,6 @@ body{
   cursor:pointer;
 }
 
-/* EMPTY */
-
 .empty{
   text-align:center;
   color:#777;
@@ -295,6 +314,10 @@ body{
     align-items:flex-start;
   }
 
+  .product-left{
+    width:100%;
+  }
+
   .product-right{
     width:100%;
     justify-content:space-between;
@@ -319,7 +342,8 @@ body{
 
     <div class="search-box">
 
-      <input type="text"
+      <input
+      type="text"
       id="searchInput"
       placeholder="Search Products...">
 
@@ -335,40 +359,25 @@ body{
 
     <div class="products" id="productList"></div>
 
-    <!-- RIGHT SIDE -->
+    <!-- SIDE PANEL -->
 
     <div class="side-panel">
 
-      <!-- CUSTOMER DETAILS -->
+      <!-- CUSTOMER -->
 
       <div class="customer-box">
 
         <h2>👤 Customer Details</h2>
 
-        <input type="text"
-        id="customerName"
-        placeholder="Customer Name"
-        required>
+        <input type="text" id="customerName" placeholder="Customer Name">
 
-        <textarea
-        id="customerAddress"
-        placeholder="Customer Address"
-        required></textarea>
+        <textarea id="customerAddress" placeholder="Customer Address"></textarea>
 
-        <input type="text"
-        id="customerPincode"
-        placeholder="Pincode"
-        required>
+        <input type="text" id="customerPincode" placeholder="Pincode">
 
-        <input type="text"
-        id="customerState"
-        placeholder="State"
-        required>
+        <input type="text" id="customerState" placeholder="State">
 
-        <input type="text"
-        id="customerMobile"
-        placeholder="Mobile Number"
-        required>
+        <input type="text" id="customerMobile" placeholder="Mobile Number">
 
       </div>
 
@@ -388,11 +397,8 @@ body{
 
         <div class="total" id="total">₹0</div>
 
-        <button class="order-btn"
-        onclick="placeOrder()">
-
+        <button class="order-btn" onclick="placeOrder()">
           PLACE ORDER
-
         </button>
 
       </div>
@@ -409,67 +415,58 @@ body{
 
 const products = [
 
-/* SWITCHES */
+{name:"SPRING COUNTER",price:20,image:"https://i.postimg.cc/4dXzXH1R/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg"},
+{name:"SPRING LOW TENSION",price:30,image:"https://via.placeholder.com/100"},
+{name:"LIMIT SWITCH SHORT ROLLER",price:35,image:"https://via.placeholder.com/100"},
+{name:"SPRING HIGH TENSION",price:40,image:"https://i.postimg.cc/kGBR5Q6z/Whats-App-Image-2026-05-24-at-10-20-19-AM.jpg"},
+{name:"LIMIT SWITCH LONG ROLLER",price:40,image:"https://via.placeholder.com/100"},
+{name:"CAPACITOR 2.5UF",price:40,image:"https://via.placeholder.com/100"},
+{name:"FRC CONNECTOR 10PIN",price:40,image:"https://via.placeholder.com/100"},
+{name:"DIAPHRAGM",price:50,image:"https://via.placeholder.com/100"},
+{name:"FRC CONNECTOR 20PIN",price:50,image:"https://via.placeholder.com/100"},
+{name:"ROCKER SWITCH 16AMP",price:60,image:"https://via.placeholder.com/100"},
 
-{name:"SPRING COUNTER",price:20},
-{name:"SPRING LOW TENSION",price:30},
-{name:"LIMIT SWITCH SHORT ROLLER",price:35},
-{name:"SPRING HIGH TENSION",price:40},
-{name:"LIMIT SWITCH LONG ROLLER",price:40},
-{name:"CAPACITOR 2.5UF",price:40},
-{name:"FRC CONNECTOR 10PIN",price:40},
-{name:"DIAPHRAGM",price:50},
-{name:"FRC CONNECTOR 20PIN",price:50},
-{name:"ROCKER SWITCH 16AMP",price:60},
+{name:"RESET SWITCH",price:100,image:"https://via.placeholder.com/100"},
+{name:"RUBBER WHEELS BASE",price:30,image:"https://via.placeholder.com/100"},
+{name:"CARBAN VANCE 28*16*3MM",price:80,image:"https://via.placeholder.com/100"},
+{name:"ENCODER WHEELS",price:100,image:"https://via.placeholder.com/100"},
+{name:"RUBBER WHEELS 6PCS",price:120,image:"https://via.placeholder.com/100"},
+{name:"COUNTER SENSOR WITH CONNECTOR",price:130,image:"https://via.placeholder.com/100"},
+{name:"ENCODER SENSOR",price:150,image:"https://via.placeholder.com/100"},
+{name:"STACKER SENSOR",price:150,image:"https://via.placeholder.com/100"},
+{name:"HOPPER SENSOR",price:150,image:"https://via.placeholder.com/100"},
+{name:"MG SENSOR",price:350,image:"https://via.placeholder.com/100"},
+{name:"COLOUR SENSOR",price:850,image:"https://i.postimg.cc/nhvZqXq2/Colour-Sensor.jpg"},
 
-/* SENSORS */
+{name:"TFT DISPLAY CONNECTOR 5PIN",price:20,image:"https://via.placeholder.com/100"},
+{name:"MX-50i CUSTOMER DISPLAY",price:600,image:"https://via.placeholder.com/100"},
+{name:"BNC DISPLAY PANEL",price:600,image:"https://via.placeholder.com/100"},
+{name:"MIX VALUE CUSTOMER DISPLAY",price:700,image:"https://via.placeholder.com/100"},
+{name:"SEMI VALUE LCD DISPLAY",price:700,image:"https://via.placeholder.com/100"},
+{name:'TFT DISPLAY 2.8"',price:800,image:"https://via.placeholder.com/100"},
+{name:'TFT DISPLAY 3.5"',price:1200,image:"https://via.placeholder.com/100"},
 
-{name:"RESET SWITCH",price:100},
-{name:"RUBBER WHEELS BASE",price:30},
-{name:"CARBAN VANCE 28*16*3MM",price:80},
-{name:"ENCODER WHEELS",price:100},
-{name:"RUBBER WHEELS 6PCS",price:120},
-{name:"COUNTER SENSOR WITH CONNECTOR",price:130},
-{name:"ENCODER SENSOR",price:150},
-{name:"STACKER SENSOR",price:150},
-{name:"HOPPER SENSOR",price:150},
-{name:"MG SENSOR",price:350},
+{name:"9VDC MOTOR",price:350,image:"https://i.postimg.cc/d1Z5Tyyq/9VDC-Motor-removebg-preview.png"},
+{name:"TRANSFORMER LNC",price:350,image:"https://via.placeholder.com/100"},
+{name:"TRANSFORMER BNC",price:550,image:"https://via.placeholder.com/100"},
+{name:"COUNTER ASSEMBLY",price:600,image:"https://via.placeholder.com/100"},
+{name:"MIX VALUE IR SENSOR UP",price:600,image:"https://via.placeholder.com/100"},
+{name:"MIX VALUE LENGTH SENSOR",price:800,image:"https://via.placeholder.com/100"},
+{name:"MIX VALUE PCB",price:900,image:"https://via.placeholder.com/100"},
+{name:"SOFTWARE UPDATE TOOL",price:900,image:"https://via.placeholder.com/100"},
+{name:"SPINDLE MOTOR 25W 230V",price:1500,image:"https://via.placeholder.com/100"},
+{name:"BNC MOTHER BOARD 110/230V",price:1600,image:"https://via.placeholder.com/100"},
+{name:"BNC MOTHER BOARD GODREJ TYPES",price:2200,image:"https://via.placeholder.com/100"},
+{name:"HOPPER MOTOR 25W 230V",price:2300,image:"https://via.placeholder.com/100"},
 
-/* DISPLAYS */
-
-{name:"TFT DISPLAY CONNECTOR 5PIN",price:20},
-{name:"MX-50i CUSTOMER DISPLAY",price:600},
-{name:"BNC DISPLAY PANEL",price:600},
-{name:"MIX VALUE CUSTOMER DISPLAY",price:700},
-{name:"SEMI VALUE LCD DISPLAY",price:700},
-{name:'TFT DISPLAY 2.8"',price:800},
-{name:'TFT DISPLAY 3.5"',price:1200},
-
-/* MOTORS */
-
-{name:"9VDC MOTOR",price:350},
-{name:"TRANSFORMER LNC",price:350},
-{name:"TRANSFORMER BNC",price:550},
-{name:"COUNTER ASSEMBLY",price:600},
-{name:"MIX VALUE IR SENSOR UP",price:600},
-{name:"MIX VALUE LENGTH SENSOR",price:800},
-{name:"MIX VALUE PCB",price:900},
-{name:"SOFTWARE UPDATE TOOL",price:900},
-{name:"SPINDLE MOTOR 25W 230V",price:1500},
-{name:"BNC MOTHER BOARD 110/230V",price:1600},
-{name:"BNC MOTHER BOARD GODREJ TYPES",price:2200},
-{name:"HOPPER MOTOR 25W 230V",price:2300},
-
-/* BELTS */
-
-{name:"RUBBER BELT LNC",price:50},
-{name:"RUBBER PAD 3.1MM",price:50},
-{name:"RUBBER PAD 3.3MM",price:60},
-{name:"AIR PIPE",price:80},
-{name:"RUBBER BELT WHITE BNC",price:130},
-{name:"UV TUBE 9W",price:150},
-{name:"UV TUBE 9W (HIGH)",price:200},
-{name:"AIR FILTER",price:200}
+{name:"RUBBER BELT LNC",price:50,image:"https://via.placeholder.com/100"},
+{name:"RUBBER PAD 3.1MM",price:50,image:"https://via.placeholder.com/100"},
+{name:"RUBBER PAD 3.3MM",price:60,image:"https://via.placeholder.com/100"},
+{name:"AIR PIPE",price:80,image:"https://via.placeholder.com/100"},
+{name:"RUBBER BELT WHITE BNC",price:130,image:"https://via.placeholder.com/100"},
+{name:"UV TUBE 9W",price:150,image:"https://via.placeholder.com/100"},
+{name:"UV TUBE 9W (HIGH)",price:200,image:"https://via.placeholder.com/100"},
+{name:"AIR FILTER",price:200,image:"https://via.placeholder.com/100"}
 
 ];
 
@@ -483,7 +480,7 @@ const totalBox = document.getElementById("total");
 
 function renderProducts(search=""){
 
-  productList.innerHTML = "";
+  let html = "";
 
   products
   .filter(product =>
@@ -492,25 +489,31 @@ function renderProducts(search=""){
 
   .forEach((product,index)=>{
 
-    productList.innerHTML += `
+    html += `
 
     <div class="card">
 
-      <!-- LEFT -->
-
       <div class="product-left">
 
-        <div class="product-name">
-          ${product.name}
+        <div class="product-image">
+
+          <img src="${product.image}">
+
         </div>
 
-        <div class="product-price">
-          ₹${product.price}
+        <div class="product-details">
+
+          <div class="product-name">
+            ${product.name}
+          </div>
+
+          <div class="product-price">
+            ₹${product.price}
+          </div>
+
         </div>
 
       </div>
-
-      <!-- RIGHT -->
 
       <div class="product-right">
 
@@ -519,7 +522,8 @@ function renderProducts(search=""){
           <button class="qty-btn"
           onclick="decreaseQty(${index})">-</button>
 
-          <input type="number"
+          <input
+          type="number"
           class="qty-input"
           id="qty${index}"
           value="1"
@@ -530,7 +534,8 @@ function renderProducts(search=""){
 
         </div>
 
-        <button class="add-btn"
+        <button
+        class="add-btn"
         onclick="addToCart(${index})">
 
           ADD
@@ -545,25 +550,31 @@ function renderProducts(search=""){
 
   });
 
+  productList.innerHTML = html;
+
 }
 
 /* QTY */
 
 function increaseQty(index){
 
-  let qty = document.getElementById(`qty${index}`);
+  let qty =
+  document.getElementById(`qty${index}`);
 
-  qty.value = parseInt(qty.value) + 1;
+  qty.value =
+  parseInt(qty.value) + 1;
 
 }
 
 function decreaseQty(index){
 
-  let qty = document.getElementById(`qty${index}`);
+  let qty =
+  document.getElementById(`qty${index}`);
 
   if(parseInt(qty.value) > 1){
 
-    qty.value = parseInt(qty.value) - 1;
+    qty.value =
+    parseInt(qty.value) - 1;
 
   }
 
@@ -601,11 +612,9 @@ function addToCart(index){
 
 }
 
-/* RENDER CART */
+/* CART */
 
 function renderCart(){
-
-  cartItems.innerHTML = "";
 
   if(cart.length === 0){
 
@@ -622,14 +631,16 @@ function renderCart(){
   }
 
   let total = 0;
+  let cartHTML = "";
 
   cart.forEach((item,index)=>{
 
-    let subTotal = item.price * item.qty;
+    let subTotal =
+    item.price * item.qty;
 
     total += subTotal;
 
-    cartItems.innerHTML += `
+    cartHTML += `
 
       <div class="cart-item">
 
@@ -644,7 +655,8 @@ function renderCart(){
             ₹${subTotal}
           </div>
 
-          <button class="remove-btn"
+          <button
+          class="remove-btn"
           onclick="removeItem(${index})">
 
             Remove
@@ -659,6 +671,7 @@ function renderCart(){
 
   });
 
+  cartItems.innerHTML = cartHTML;
   totalBox.innerHTML = `₹${total}`;
 
 }
@@ -677,8 +690,6 @@ function removeItem(index){
 
 function placeOrder(){
 
-  /* CUSTOMER DETAILS */
-
   let customerName =
   document.getElementById("customerName").value.trim();
 
@@ -694,8 +705,6 @@ function placeOrder(){
   let customerMobile =
   document.getElementById("customerMobile").value.trim();
 
-  /* VALIDATION */
-
   if(customerName == "" ||
      customerAddress == "" ||
      customerPincode == "" ||
@@ -703,42 +712,28 @@ function placeOrder(){
      customerMobile == ""){
 
     alert("Please Fill Customer Details");
-
     return;
 
   }
-
-  /* CART CHECK */
 
   if(cart.length === 0){
 
     alert("Please Add Products");
-
     return;
 
   }
 
-  /* WHATSAPP MESSAGE */
-
   let message =
   "🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A";
-
-  /* CUSTOMER DETAILS */
 
   message +=
   "👤 CUSTOMER DETAILS%0A%0A" +
 
   "Name : " + customerName + "%0A" +
-
   "Address : " + customerAddress + "%0A" +
-
   "Pincode : " + customerPincode + "%0A" +
-
   "State : " + customerState + "%0A" +
-
   "Mobile : " + customerMobile + "%0A%0A";
-
-  /* ORDER DETAILS */
 
   message +=
   "📦 ORDER DETAILS%0A%0A";
@@ -747,7 +742,8 @@ function placeOrder(){
 
   cart.forEach(item=>{
 
-    let sub = item.price * item.qty;
+    let sub =
+    item.price * item.qty;
 
     total += sub;
 
@@ -758,12 +754,8 @@ function placeOrder(){
 
   });
 
-  /* TOTAL */
-
   message +=
   "💰 TOTAL : ₹" + total;
-
-  /* YOUR WHATSAPP NUMBER */
 
   let phone = "918208825986";
 
@@ -776,7 +768,8 @@ function placeOrder(){
 
 /* SEARCH */
 
-document.getElementById("searchInput")
+document
+.getElementById("searchInput")
 .addEventListener("input",function(){
 
   renderProducts(this.value);
