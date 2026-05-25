@@ -1,15 +1,26 @@
+# HI-TECH Electronic Parts Ordering System (Full Code)
+
+Replace your current code with the updated version below.
+
+Main updates:
+
+* Full image popup on click
+* Minimum order ₹2000
+* WhatsApp order system
+* Product search
+* Mobile responsive design
+* All products supported
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HI-TECH ELECTRONIC SPARE PARTS</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -26,8 +37,6 @@ body{
   max-width:1600px;
   margin:auto;
 }
-
-/* HEADER */
 
 .header{
   background:linear-gradient(135deg,#004aad,#007bff);
@@ -60,8 +69,6 @@ body{
   outline:none;
 }
 
-/* MAIN */
-
 .main-layout{
   display:grid;
   grid-template-columns:1fr 380px;
@@ -69,15 +76,11 @@ body{
   align-items:start;
 }
 
-/* PRODUCTS */
-
 .products{
   display:flex;
   flex-direction:column;
   gap:15px;
 }
-
-/* PRODUCT CARD */
 
 .card{
   background:white;
@@ -85,20 +88,16 @@ body{
   padding:18px;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
   border:2px solid transparent;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
-
   transition:0.2s;
 }
 
 .card:hover{
   border-color:#007bff;
 }
-
-/* LEFT */
 
 .product-left{
   display:flex;
@@ -107,8 +106,6 @@ body{
   flex:1;
 }
 
-/* IMAGE */
-
 .product-image img{
   width:95px;
   height:95px;
@@ -116,9 +113,44 @@ body{
   border-radius:14px;
   border:2px solid #e3e3e3;
   background:white;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-/* DETAILS */
+.product-image img:hover{
+  transform:scale(1.05);
+}
+
+.image-popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.92);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  padding:20px;
+}
+
+.image-popup img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:18px;
+  background:white;
+}
+
+.close-popup{
+  position:absolute;
+  top:20px;
+  right:25px;
+  color:white;
+  font-size:40px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
 .product-details{
   flex:1;
@@ -137,15 +169,11 @@ body{
   color:#28a745;
 }
 
-/* RIGHT */
-
 .product-right{
   display:flex;
   align-items:center;
   gap:12px;
 }
-
-/* QTY */
 
 .qty-box{
   display:flex;
@@ -174,8 +202,6 @@ body{
   font-weight:bold;
 }
 
-/* BUTTON */
-
 .add-btn{
   padding:12px 18px;
   border:none;
@@ -191,14 +217,10 @@ body{
   background:#e68900;
 }
 
-/* SIDE PANEL */
-
 .side-panel{
   position:sticky;
   top:20px;
 }
-
-/* CUSTOMER */
 
 .customer-box{
   background:white;
@@ -227,8 +249,6 @@ body{
   resize:none;
   height:80px;
 }
-
-/* CART */
 
 .cart{
   background:white;
@@ -274,6 +294,14 @@ body{
   color:#28a745;
 }
 
+.min-order{
+  margin-top:10px;
+  color:red;
+  font-size:14px;
+  font-weight:600;
+  text-align:center;
+}
+
 .order-btn{
   width:100%;
   margin-top:20px;
@@ -293,10 +321,7 @@ body{
   padding:30px 0;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
-
   .main-layout{
     grid-template-columns:1fr;
   }
@@ -304,11 +329,9 @@ body{
   .side-panel{
     position:relative;
   }
-
 }
 
 @media(max-width:700px){
-
   .card{
     flex-direction:column;
     align-items:flex-start;
@@ -322,9 +345,7 @@ body{
     width:100%;
     justify-content:space-between;
   }
-
 }
-
 </style>
 </head>
 
@@ -332,88 +353,64 @@ body{
 
 <div class="container">
 
-  <!-- HEADER -->
+<div class="header">
+  <h1>HI-TECH ELECTRONIC PARTS</h1>
+  <p>Electronic Parts Ordering System</p>
 
-  <div class="header">
-
-    <h1>HI-TECH ELECTRONIC PARTS</h1>
-
-    <p>Electronic Parts Ordering System</p>
-
-    <div class="search-box">
-
-      <input
-      type="text"
-      id="searchInput"
-      placeholder="Search Products...">
-
-    </div>
-
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search Products...">
   </div>
+</div>
 
-  <!-- MAIN -->
+<div class="main-layout">
 
-  <div class="main-layout">
+<div class="products" id="productList"></div>
 
-    <!-- PRODUCTS -->
+<div class="side-panel">
 
-    <div class="products" id="productList"></div>
+<div class="customer-box">
+  <h2>👤 Customer Details</h2>
 
-    <!-- SIDE PANEL -->
+  <input type="text" id="customerName" placeholder="Customer Name">
+  <textarea id="customerAddress" placeholder="Customer Address"></textarea>
+  <input type="text" id="customerPincode" placeholder="Pincode">
+  <input type="text" id="customerState" placeholder="State">
+  <input type="text" id="customerMobile" placeholder="Mobile Number">
+</div>
 
-    <div class="side-panel">
+<div class="cart">
 
-      <!-- CUSTOMER -->
+<h2>🛒 Order Cart</h2>
 
-      <div class="customer-box">
+<div id="cartItems">
+  <div class="empty">No Products Added</div>
+</div>
 
-        <h2>👤 Customer Details</h2>
+<div class="total" id="total">₹0</div>
 
-        <input type="text" id="customerName" placeholder="Customer Name">
+<div class="min-order">
+Minimum Order Value ₹2000 Required
+</div>
 
-        <textarea id="customerAddress" placeholder="Customer Address"></textarea>
+<button class="order-btn" onclick="placeOrder()">
+PLACE ORDER
+</button>
 
-        <input type="text" id="customerPincode" placeholder="Pincode">
+</div>
+</div>
+</div>
+</div>
 
-        <input type="text" id="customerState" placeholder="State">
-
-        <input type="text" id="customerMobile" placeholder="Mobile Number">
-
-      </div>
-
-      <!-- CART -->
-
-      <div class="cart">
-
-        <h2>🛒 Order Cart</h2>
-
-        <div id="cartItems">
-
-          <div class="empty">
-            No Products Added
-          </div>
-
-        </div>
-
-        <div class="total" id="total">₹0</div>
-
-        <button class="order-btn" onclick="placeOrder()">
-          PLACE ORDER
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
+<div id="imagePopup" class="image-popup">
+  <span class="close-popup" onclick="closeImage()">✕</span>
+  <img id="popupImg">
 </div>
 
 <script>
 
-/* PRODUCTS */
-
 const products = [
+
+/* ADD ALL YOUR PRODUCTS HERE */
 
 {name:"SPRING COUNTER",price:20,image:"https://i.postimg.cc/4dXzXH1R/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg"},
 {name:"SPRING LOW TENSION",price:30,image:"https://i.postimg.cc/gJ6xhvH8/Whats-App-Image-2026-05-24-at-10-30-52-AM.jpg"},
@@ -432,7 +429,7 @@ const products = [
 {name:"ENCODER WHEELS",price:100,image:"https://i.postimg.cc/K8BfFMM6/Encoder-Wheels-removebg-preview.png"},
 {name:"RUBBER WHEELS 6PCS",price:120,image:"https://i.postimg.cc/C5Rp5NG4/Whats-App-Image-2026-05-24-at-11-01-27-AM.jpg"},
 {name:"RUBBER WITH BASE ",price:30,image:"https://i.postimg.cc/9FrVxW7z/Rubber-Wheels-With-Base-removebg-preview.png"},
-{name:"COUNTER SENSOR WITH CONNECTOR",price:130,image:"https://i.postimg.cc/CM20ktxD/Whats-App-Image-2026-05-25-at-8-13-02-AM.jpg"},
+{name:"COUNTER SENSOR WITH CONNECTOR",price:130,image:"https://i.postimg.cc/K8897zkn/Whats-App-Image-2026-05-24-at-12-01-47-PM.jpg"},
 {name:"ENCODER SENSOR",price:150,image:"https://i.postimg.cc/MG090QZy/Encoder-Sensor-removebg-preview.png"},
 {name:"STACKER SENSOR",price:150,image:"https://i.postimg.cc/7hmm28V7/Whats-App-Image-2026-05-24-at-12-58-11-PM.jpg"},
 {name:"HOPPER SENSOR",price:150,image:"https://i.postimg.cc/zDWZxWT9/Whats-App-Image-2026-05-24-at-6-07-00-PM.jpg"},
@@ -484,307 +481,231 @@ const productList = document.getElementById("productList");
 const cartItems = document.getElementById("cartItems");
 const totalBox = document.getElementById("total");
 
-/* RENDER PRODUCTS */
-
 function renderProducts(search=""){
 
-  let html = "";
+let html = "";
 
-  products
-  .filter(product =>
-    product.name.toLowerCase().includes(search.toLowerCase())
-  )
+products
+.filter(product =>
+product.name.toLowerCase().includes(search.toLowerCase())
+)
 
-  .forEach((product,index)=>{
+.forEach((product,index)=>{
 
-    html += `
+html += `
+<div class="card">
 
-    <div class="card">
+<div class="product-left">
 
-      <div class="product-left">
+<div class="product-image">
+<img src="${product.image}" onclick="openImage('${product.image}')">
+</div>
 
-        <div class="product-image">
+<div class="product-details">
+<div class="product-name">${product.name}</div>
+<div class="product-price">₹${product.price}</div>
+</div>
 
-          <img src="${product.image}">
+</div>
 
-        </div>
+<div class="product-right">
 
-        <div class="product-details">
+<div class="qty-box">
+<button class="qty-btn" onclick="decreaseQty(${index})">-</button>
 
-          <div class="product-name">
-            ${product.name}
-          </div>
+<input type="number" class="qty-input" id="qty${index}" value="1" min="1">
 
-          <div class="product-price">
-            ₹${product.price}
-          </div>
+<button class="qty-btn" onclick="increaseQty(${index})">+</button>
+</div>
 
-        </div>
+<button class="add-btn" onclick="addToCart(${index})">
+ADD
+</button>
 
-      </div>
+</div>
+</div>
+`;
 
-      <div class="product-right">
+});
 
-        <div class="qty-box">
-
-          <button class="qty-btn"
-          onclick="decreaseQty(${index})">-</button>
-
-          <input
-          type="number"
-          class="qty-input"
-          id="qty${index}"
-          value="1"
-          min="1">
-
-          <button class="qty-btn"
-          onclick="increaseQty(${index})">+</button>
-
-        </div>
-
-        <button
-        class="add-btn"
-        onclick="addToCart(${index})">
-
-          ADD
-
-        </button>
-
-      </div>
-
-    </div>
-
-    `;
-
-  });
-
-  productList.innerHTML = html;
-
+productList.innerHTML = html;
 }
 
-/* QTY */
+function openImage(image){
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = image;
+}
+
+function closeImage(){
+  document.getElementById("imagePopup").style.display = "none";
+}
 
 function increaseQty(index){
-
-  let qty =
-  document.getElementById(`qty${index}`);
-
-  qty.value =
-  parseInt(qty.value) + 1;
-
+  let qty = document.getElementById(`qty${index}`);
+  qty.value = parseInt(qty.value) + 1;
 }
 
 function decreaseQty(index){
-
-  let qty =
-  document.getElementById(`qty${index}`);
+  let qty = document.getElementById(`qty${index}`);
 
   if(parseInt(qty.value) > 1){
-
-    qty.value =
-    parseInt(qty.value) - 1;
-
+    qty.value = parseInt(qty.value) - 1;
   }
-
 }
-
-/* ADD TO CART */
 
 function addToCart(index){
 
-  const product = products[index];
+const product = products[index];
 
-  let qty = parseInt(
-    document.getElementById(`qty${index}`).value
-  );
+let qty = parseInt(
+  document.getElementById(`qty${index}`).value
+);
 
-  const existing = cart.find(item =>
-    item.name === product.name
-  );
+const existing = cart.find(item =>
+item.name === product.name
+);
 
-  if(existing){
-
-    existing.qty += qty;
-
-  }else{
-
-    cart.push({
-      name:product.name,
-      price:product.price,
-      qty:qty
-    });
-
-  }
-
-  renderCart();
-
+if(existing){
+  existing.qty += qty;
+}else{
+  cart.push({
+    name:product.name,
+    price:product.price,
+    qty:qty
+  });
 }
 
-/* CART */
+renderCart();
+}
 
 function renderCart(){
 
-  if(cart.length === 0){
+if(cart.length === 0){
 
-    cartItems.innerHTML = `
-      <div class="empty">
-        No Products Added
-      </div>
-    `;
+cartItems.innerHTML = `
+<div class="empty">
+No Products Added
+</div>
+`;
 
-    totalBox.innerHTML = "₹0";
-
-    return;
-
-  }
-
-  let total = 0;
-  let cartHTML = "";
-
-  cart.forEach((item,index)=>{
-
-    let subTotal =
-    item.price * item.qty;
-
-    total += subTotal;
-
-    cartHTML += `
-
-      <div class="cart-item">
-
-        <div class="cart-item-name">
-          ${item.name}
-        </div>
-
-        <div class="cart-item-details">
-
-          <div>
-            Qty : ${item.qty}<br>
-            ₹${subTotal}
-          </div>
-
-          <button
-          class="remove-btn"
-          onclick="removeItem(${index})">
-
-            Remove
-
-          </button>
-
-        </div>
-
-      </div>
-
-    `;
-
-  });
-
-  cartItems.innerHTML = cartHTML;
-  totalBox.innerHTML = `₹${total}`;
-
+totalBox.innerHTML = "₹0";
+return;
 }
 
-/* REMOVE */
+let total = 0;
+let cartHTML = "";
+
+cart.forEach((item,index)=>{
+
+let subTotal = item.price * item.qty;
+
+total += subTotal;
+
+cartHTML += `
+<div class="cart-item">
+
+<div class="cart-item-name">
+${item.name}
+</div>
+
+<div class="cart-item-details">
+
+<div>
+Qty : ${item.qty}<br>
+₹${subTotal}
+</div>
+
+<button class="remove-btn" onclick="removeItem(${index})">
+Remove
+</button>
+
+</div>
+</div>
+`;
+
+});
+
+cartItems.innerHTML = cartHTML;
+totalBox.innerHTML = `₹${total}`;
+}
 
 function removeItem(index){
-
   cart.splice(index,1);
-
   renderCart();
-
 }
-
-/* PLACE ORDER */
 
 function placeOrder(){
 
-  let customerName =
-  document.getElementById("customerName").value.trim();
+let customerName = document.getElementById("customerName").value.trim();
+let customerAddress = document.getElementById("customerAddress").value.trim();
+let customerPincode = document.getElementById("customerPincode").value.trim();
+let customerState = document.getElementById("customerState").value.trim();
+let customerMobile = document.getElementById("customerMobile").value.trim();
 
-  let customerAddress =
-  document.getElementById("customerAddress").value.trim();
+if(customerName == "" ||
+customerAddress == "" ||
+customerPincode == "" ||
+customerState == "" ||
+customerMobile == ""){
 
-  let customerPincode =
-  document.getElementById("customerPincode").value.trim();
-
-  let customerState =
-  document.getElementById("customerState").value.trim();
-
-  let customerMobile =
-  document.getElementById("customerMobile").value.trim();
-
-  if(customerName == "" ||
-     customerAddress == "" ||
-     customerPincode == "" ||
-     customerState == "" ||
-     customerMobile == ""){
-
-    alert("Please Fill Customer Details");
-    return;
-
-  }
-
-  if(cart.length === 0){
-
-    alert("Please Add Products");
-    return;
-
-  }
-
-  let message =
-  "🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A";
-
-  message +=
-  "👤 CUSTOMER DETAILS%0A%0A" +
-
-  "Name : " + customerName + "%0A" +
-  "Address : " + customerAddress + "%0A" +
-  "Pincode : " + customerPincode + "%0A" +
-  "State : " + customerState + "%0A" +
-  "Mobile : " + customerMobile + "%0A%0A";
-
-  message +=
-  "📦 ORDER DETAILS%0A%0A";
-
-  let total = 0;
-
-  cart.forEach(item=>{
-
-    let sub =
-    item.price * item.qty;
-
-    total += sub;
-
-    message +=
-    "Product : " + item.name + "%0A" +
-    "Qty : " + item.qty + "%0A" +
-    "Price : ₹" + sub + "%0A%0A";
-
-  });
-
-  message +=
-  "💰 TOTAL : ₹" + total;
-
-  let phone = "918208825986";
-
-  window.open(
-    `https://wa.me/${phone}?text=${message}`,
-    "_blank"
-  );
-
+alert("Please Fill Customer Details");
+return;
 }
 
-/* SEARCH */
+if(cart.length === 0){
+alert("Please Add Products");
+return;
+}
+
+let total = 0;
+
+cart.forEach(item=>{
+  total += item.price * item.qty;
+});
+
+if(total < 2000){
+alert("Minimum Order Value Must Be ₹2000");
+return;
+}
+
+let message =
+"🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A";
+
+message +=
+"👤 CUSTOMER DETAILS%0A%0A" +
+"Name : " + customerName + "%0A" +
+"Address : " + customerAddress + "%0A" +
+"Pincode : " + customerPincode + "%0A" +
+"State : " + customerState + "%0A" +
+"Mobile : " + customerMobile + "%0A%0A";
+
+message += "📦 ORDER DETAILS%0A%0A";
+
+cart.forEach(item=>{
+
+let sub = item.price * item.qty;
+
+message +=
+"Product : " + item.name + "%0A" +
+"Qty : " + item.qty + "%0A" +
+"Price : ₹" + sub + "%0A%0A";
+});
+
+message += "💰 TOTAL : ₹" + total;
+
+let phone = "918208825986";
+
+window.open(
+`https://wa.me/${phone}?text=${message}`,
+"_blank"
+);
+}
 
 document
 .getElementById("searchInput")
 .addEventListener("input",function(){
-
-  renderProducts(this.value);
-
+renderProducts(this.value);
 });
-
-/* LOAD */
 
 renderProducts();
 
@@ -792,3 +713,4 @@ renderProducts();
 
 </body>
 </html>
+```
