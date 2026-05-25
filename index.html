@@ -332,6 +332,126 @@ body{
     justify-content:space-between;
   }
 }
+/* ADMIN BUTTON */
+
+#adminOpenBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+border:none;
+border-radius:50%;
+background:#004aad;
+color:white;
+font-size:28px;
+cursor:pointer;
+z-index:99999;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ADMIN PANEL */
+
+#adminPanel{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+padding:20px;
+}
+
+.admin-box{
+background:white;
+width:100%;
+max-width:900px;
+max-height:95vh;
+overflow:auto;
+border-radius:20px;
+padding:20px;
+}
+
+.admin-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.admin-header h2{
+color:#004aad;
+}
+
+.admin-header button{
+border:none;
+background:red;
+color:white;
+width:40px;
+height:40px;
+border-radius:10px;
+font-size:20px;
+cursor:pointer;
+}
+
+.admin-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:15px;
+}
+
+.admin-login-btn,
+.save-btn,
+.update-btn,
+.delete-btn{
+padding:12px 18px;
+border:none;
+border-radius:10px;
+color:white;
+font-weight:600;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+.admin-login-btn{
+background:#004aad;
+width:100%;
+}
+
+.save-btn{
+background:#28a745;
+width:100%;
+}
+
+.update-btn{
+background:#ff9800;
+}
+
+.delete-btn{
+background:red;
+}
+
+.admin-product{
+border:1px solid #ddd;
+padding:15px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.admin-product img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
 </style>
 </head>
 
@@ -694,9 +814,220 @@ renderProducts(this.value);
 });
 
 renderProducts();
+/* =========================
+ADMIN PANEL
+========================= */
+
+const adminPassword = "12345";
+
+function openAdmin(){
+document.getElementById("adminPanel").style.display = "flex";
+}
+
+function closeAdmin(){
+document.getElementById("adminPanel").style.display = "none";
+}
+
+function closeAdmin(){
+document.getElementById("adminPanel").style.display="none";
+}
+
+function loginAdmin(){
+
+let pass =
+document.getElementById("adminPassword").value;
+
+if(pass === adminPassword){
+
+document.getElementById("adminContent").style.display="block";
+
+loadAdminProducts();
+
+}else{
+
+alert("Wrong Password");
+
+}
+}
+
+/* =========================
+LOAD PRODUCTS
+========================= */
+
+function loadAdminProducts(){
+
+let html = "";
+
+for(let i = 0; i < products.length; i++){
+
+let product = products[i];
+
+html += `
+
+<div class="admin-product">
+
+<img src="${product.image}">
+
+<input type="text"
+id="editName_${i}"
+value="${product.name}">
+
+<input type="number"
+id="editPrice_${i}"
+value="${product.price}">
+
+<input type="text"
+id="editImage_${i}"
+value="${product.image}">
+
+<button class="update-btn"
+onclick="updateProduct(${i})">
+UPDATE
+</button>
+
+<button class="delete-btn"
+onclick="deleteProduct(${i})">
+DELETE
+</button>
+
+</div>
+
+`;
+
+}
+
+document.getElementById("adminProducts").innerHTML = html;
+
+}
+/* =========================
+UPDATE PRODUCT
+========================= */
+
+function updateProduct(index){
+
+products[index].name =
+document.getElementById(`editName_${index}`).value;
+
+products[index].price =
+parseInt(
+document.getElementById(`editPrice_${index}`).value
+);
+
+products[index].image =
+document.getElementById(`editImage_${index}`).value;
+
+renderProducts();
+
+loadAdminProducts();
+
+alert("Product Updated");
+
+}
+/* =========================
+DELETE PRODUCT
+========================= */
+
+function deleteProduct(index){
+
+if(confirm("Delete Product?")){
+
+products.splice(index,1);
+
+renderProducts();
+
+loadAdminProducts();
+
+alert("Deleted");
+
+}
+}
+
+/* =========================
+ADD PRODUCT
+========================= */
+
+function addNewProduct(){
+
+let name =
+document.getElementById("newName").value;
+
+let price =
+document.getElementById("newPrice").value;
+
+let image =
+document.getElementById("newImage").value;
+
+if(name=="" || price=="" || image==""){
+
+alert("Fill All Fields");
+
+return;
+}
+
+products.push({
+
+name:name,
+price:parseInt(price),
+image:image
+
+});
+
+document.getElementById("newName").value="";
+document.getElementById("newPrice").value="";
+document.getElementById("newImage").value="";
+
+renderProducts();
+
+loadAdminProducts();
+
+alert("Product Added");
+
+}
 
 </script>
+<!-- ADMIN BUTTON -->
+<button id="adminOpenBtn" onclick="openAdmin()">⚙</button>
 
+<!-- HIDDEN ADMIN PANEL -->
+<div id="adminPanel">
+
+<div class="admin-box">
+
+<div class="admin-header">
+<h2>HI-TECH ADMIN PANEL</h2>
+<button onclick="closeAdmin()">✕</button>
+</div>
+
+<input type="password" id="adminPassword" placeholder="Enter Admin Password">
+
+<button class="admin-login-btn" onclick="loginAdmin()">
+LOGIN
+</button>
+
+<div id="adminContent" style="display:none;">
+
+<h3>Add New Product</h3>
+
+<input type="text" id="newName" placeholder="Product Name">
+
+<input type="number" id="newPrice" placeholder="Price">
+
+<input type="text" id="newImage" placeholder="Image URL">
+
+<button class="save-btn" onclick="addNewProduct()">
+ADD PRODUCT
+</button>
+
+<hr>
+
+<h3>Edit Products</h3>
+
+<div id="adminProducts"></div>
+
+</div>
+
+</div>
+</div>
 </body>
 </html>
 ```
