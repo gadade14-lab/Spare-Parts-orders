@@ -3,420 +3,490 @@
     "name": "SPRING COUNTER",
     "price": 20,
     "stock": 90,
-    "image": "https://i.postimg.cc/J0z0mJWx/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg"
+    "image": "https://i.postimg.cc/J0z0mJWx/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg",
+    "category": "Springs"
   },
   {
     "name": "SPRING LOW TENSION",
     "price": 30,
     "stock": 10,
-    "image": "https://i.postimg.cc/gJ6xhvH8/Whats-App-Image-2026-05-24-at-10-30-52-AM.jpg"
+    "image": "https://i.postimg.cc/gJ6xhvH8/Whats-App-Image-2026-05-24-at-10-30-52-AM.jpg",
+    "category": "Springs"
   },
   {
     "name": "LIMIT SWITCH SHORT ROLLER",
     "price": 35,
     "stock": 200,
-    "image": "https://i.postimg.cc/prFKPwS2/Whats-App-Image-2026-05-24-at-10-25-02-AM.jpg"
+    "image": "https://i.postimg.cc/prFKPwS2/Whats-App-Image-2026-05-24-at-10-25-02-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "SPRING HIGH TENSION",
     "price": 40,
     "stock": 30,
-    "image": "https://i.postimg.cc/kGBR5Q6z/Whats-App-Image-2026-05-24-at-10-20-19-AM.jpg"
+    "image": "https://i.postimg.cc/kGBR5Q6z/Whats-App-Image-2026-05-24-at-10-20-19-AM.jpg",
+    "category": "Springs"
   },
   {
     "name": "LIMIT SWITCH LONG ROLLER",
     "price": 200,
-    "stock": 10,
-    "image": "https://i.postimg.cc/ncqqgt7j/Whats-App-Image-2026-05-24-at-10-25-25-AM.jpg"
+    "stock": 0,
+    "image": "https://i.postimg.cc/ncqqgt7j/Whats-App-Image-2026-05-24-at-10-25-25-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "CAPACITOR 2.5UF",
     "price": 40,
     "stock": 120,
-    "image": "https://i.postimg.cc/Xq1JvJVh/Whats-App-Image-2026-05-24-at-10-34-08-AM.jpg"
+    "image": "https://i.postimg.cc/Xq1JvJVh/Whats-App-Image-2026-05-24-at-10-34-08-AM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "FRC CONNECTOR 10PIN",
     "price": 40,
     "stock": 50,
-    "image": "https://i.postimg.cc/3JwHb3zj/Whats-App-Image-2026-05-24-at-10-36-14-AM.jpg"
+    "image": "https://i.postimg.cc/3JwHb3zj/Whats-App-Image-2026-05-24-at-10-36-14-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "DIAPHRAGM",
     "price": 50,
     "stock": 20,
-    "image": "https://i.postimg.cc/W3jtWCWn/DAIPHARGM.jpg"
+    "image": "https://i.postimg.cc/W3jtWCWn/DAIPHARGM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "FRC CONNECTOR 20PIN",
     "price": 50,
     "stock": 15,
-    "image": "https://i.postimg.cc/66vHWgnt/Whats-App-Image-2026-05-24-at-10-48-51-AM.jpg"
+    "image": "https://i.postimg.cc/66vHWgnt/Whats-App-Image-2026-05-24-at-10-48-51-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "ROCKER SWITCH 16AMP",
     "price": 60,
     "stock": 9,
-    "image": "https://i.postimg.cc/sxHX2Xj3/Whats-App-Image-2026-05-24-at-10-50-49-AM.jpg"
+    "image": "https://i.postimg.cc/sxHX2Xj3/Whats-App-Image-2026-05-24-at-10-50-49-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "RESET SWITCH",
     "price": 100,
     "stock": 105,
-    "image": "https://i.postimg.cc/mkpDrDLh/Whats-App-Image-2026-05-24-at-10-59-08-AM.jpg"
+    "image": "https://i.postimg.cc/mkpDrDLh/Whats-App-Image-2026-05-24-at-10-59-08-AM.jpg",
+    "category": "Connectors & Switches"
   },
   {
     "name": "RUBBER WHEELS BASE",
     "price": 30,
     "stock": 300,
-    "image": "https://i.postimg.cc/HWJdzY5D/Rubber-Wheels-Base.jpg"
+    "image": "https://i.postimg.cc/HWJdzY5D/Rubber-Wheels-Base.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "CARBAN VANCE 28*16*3MM",
     "price": 80,
     "stock": 70,
-    "image": "https://i.postimg.cc/VsK5g7j3/Whats-App-Image-2026-05-24-at-12-55-31-PM.jpg"
+    "image": "https://i.postimg.cc/VsK5g7j3/Whats-App-Image-2026-05-24-at-12-55-31-PM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "ENCODER WHEELS",
     "price": 100,
     "stock": 4,
-    "image": "https://i.postimg.cc/K8BfFMM6/Encoder-Wheels-removebg-preview.png"
+    "image": "https://i.postimg.cc/K8BfFMM6/Encoder-Wheels-removebg-preview.png",
+    "category": "Assemblies"
   },
   {
     "name": "RUBBER WHEELS 6PCS",
     "price": 120,
     "stock": 5000,
-    "image": "https://i.postimg.cc/VvZ6N6fJ/Whats-App-Image-2026-05-24-at-11-01-27-AM.jpg"
+    "image": "https://i.postimg.cc/VvZ6N6fJ/Whats-App-Image-2026-05-24-at-11-01-27-AM.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "RUBBER WITH BASE ",
     "price": 50,
     "stock": 300,
-    "image": "https://i.postimg.cc/9FrVxW7z/Rubber-Wheels-With-Base-removebg-preview.png"
+    "image": "https://i.postimg.cc/9FrVxW7z/Rubber-Wheels-With-Base-removebg-preview.png",
+    "category": "Rubber & Belts"
   },
   {
     "name": "COUNTER SENSOR WITH CONNECTOR",
     "price": 130,
     "stock": 100,
-    "image": "https://i.postimg.cc/2j03GHQf/Whats-App-Image-2026-05-25-at-8-13-02-AM.jpg"
+    "image": "https://i.postimg.cc/2j03GHQf/Whats-App-Image-2026-05-25-at-8-13-02-AM.jpg",
+    "category": "Sensors"
   },
   {
     "name": "ENCODER SENSOR",
     "price": 150,
     "stock": 66,
-    "image": "https://i.postimg.cc/MG090QZy/Encoder-Sensor-removebg-preview.png"
+    "image": "https://i.postimg.cc/MG090QZy/Encoder-Sensor-removebg-preview.png",
+    "category": "Sensors"
   },
   {
     "name": "STACKER SENSOR",
     "price": 150,
     "stock": 105,
-    "image": "https://i.postimg.cc/T2th0kV8/Whats-App-Image-2026-05-24-at-12-58-11-PM.jpg"
+    "image": "https://i.postimg.cc/T2th0kV8/Whats-App-Image-2026-05-24-at-12-58-11-PM.jpg",
+    "category": "Sensors"
   },
   {
     "name": "HOPPER SENSOR",
     "price": 150,
     "stock": 200,
-    "image": "https://i.postimg.cc/wvVMS2n7/Whats-App-Image-2026-05-24-at-6-07-00-PM.jpg"
+    "image": "https://i.postimg.cc/wvVMS2n7/Whats-App-Image-2026-05-24-at-6-07-00-PM.jpg",
+    "category": "Sensors"
   },
   {
     "name": "MG SENSOR",
     "price": 350,
     "stock": 60,
-    "image": "https://i.postimg.cc/kgTQ7v5f/MG-Sensor-removebg-preview.png"
+    "image": "https://i.postimg.cc/kgTQ7v5f/MG-Sensor-removebg-preview.png",
+    "category": "Sensors"
   },
   {
     "name": "COLOUR SENSOR",
     "price": 850,
     "stock": 50,
-    "image": "https://i.postimg.cc/Tw91Z0BX/Colour-Sensor.png"
+    "image": "https://i.postimg.cc/Tw91Z0BX/Colour-Sensor.png",
+    "category": "Sensors"
   },
   {
     "name": "TFT DISPLAY CONNECTOR 5PIN",
     "price": 20,
     "stock": 100,
-    "image": "https://i.postimg.cc/T2th0krN/Whats-App-Image-2026-05-24-at-12-49-45-PM.jpg"
+    "image": "https://i.postimg.cc/T2th0krN/Whats-App-Image-2026-05-24-at-12-49-45-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "GODREJ BNC DISPLAY PANEL",
     "price": 600,
     "stock": 12,
-    "image": "https://i.postimg.cc/1tHXLBbN/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg"
+    "image": "https://i.postimg.cc/1tHXLBbN/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC DISPLAY PANEL",
     "price": 600,
     "stock": 10,
-    "image": "https://i.postimg.cc/mkFbw5Bc/Whats-App-Image-2026-05-24-at-6-16-08-PM.jpg"
+    "image": "https://i.postimg.cc/mkFbw5Bc/Whats-App-Image-2026-05-24-at-6-16-08-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC DISPLAY PANEL",
     "price": 600,
     "stock": 14,
-    "image": "https://i.postimg.cc/KjL1zzkS/Whats-App-Image-2026-05-24-at-6-17-29-PM.jpg"
+    "image": "https://i.postimg.cc/KjL1zzkS/Whats-App-Image-2026-05-24-at-6-17-29-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC CUSTOMER DISPLAY ",
     "price": 600,
     "stock": 15,
-    "image": "https://i.postimg.cc/DzQM3dym/Whats-App-Image-2026-05-24-at-5-48-54-PM.jpg"
+    "image": "https://i.postimg.cc/DzQM3dym/Whats-App-Image-2026-05-24-at-5-48-54-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "GODREJ BNC CUSTOMER DISPLAY",
     "price": 700,
     "stock": 11,
-    "image": "https://i.postimg.cc/HLPBgZ16/Whats-App-Image-2026-05-24-at-5-41-10-PM.jpg"
+    "image": "https://i.postimg.cc/HLPBgZ16/Whats-App-Image-2026-05-24-at-5-41-10-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "SEMI VALUE LCD DISPLAY",
     "price": 700,
     "stock": 53,
-    "image": "https://i.postimg.cc/sD1xNpmx/Whats-App-Image-2026-05-25-at-8-23-55-AM.jpg"
+    "image": "https://i.postimg.cc/sD1xNpmx/Whats-App-Image-2026-05-25-at-8-23-55-AM.jpg",
+    "category": "Displays"
   },
   {
     "name": "TFT DISPLAY 2.8\"",
     "price": 800,
     "stock": 14,
-    "image": "https://i.postimg.cc/rwZrByh3/TFT-Display-removebg-preview.png"
+    "image": "https://i.postimg.cc/rwZrByh3/TFT-Display-removebg-preview.png",
+    "category": "Displays"
   },
   {
     "name": "TFT DISPLAY 3.5\"",
     "price": 1200,
     "stock": 12,
-    "image": "https://i.postimg.cc/4d6P9Jh9/Whats-App-Image-2026-05-24-at-6-09-48-PM.jpg"
+    "image": "https://i.postimg.cc/4d6P9Jh9/Whats-App-Image-2026-05-24-at-6-09-48-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC DISPLAY PCB ",
     "price": 600,
     "stock": 15,
-    "image": "https://i.postimg.cc/mDjZkHVz/a541d443-29eb-4027-ad32-48aa9df7bc34.jpg"
+    "image": "https://i.postimg.cc/mDjZkHVz/a541d443-29eb-4027-ad32-48aa9df7bc34.jpg",
+    "category": "Displays"
   },
   {
     "name": "9VDC MOTOR",
     "price": 350,
     "stock": 3,
-    "image": "https://i.postimg.cc/d1Z5Tyyq/9VDC-Motor-removebg-preview.png"
+    "image": "https://i.postimg.cc/d1Z5Tyyq/9VDC-Motor-removebg-preview.png",
+    "category": "Motors & Transformers"
   },
   {
     "name": "TRANSFORMER LNC",
     "price": 350,
     "stock": 5,
-    "image": "https://i.postimg.cc/W4R2FQt3/Transformer-removebg-preview.png"
+    "image": "https://i.postimg.cc/W4R2FQt3/Transformer-removebg-preview.png",
+    "category": "Motors & Transformers"
   },
   {
     "name": "TRANSFORMER BNC",
     "price": 550,
     "stock": 12,
-    "image": "https://i.postimg.cc/pTZrgC3D/Whats-App-Image-2026-05-24-at-6-21-16-PM.jpg"
+    "image": "https://i.postimg.cc/pTZrgC3D/Whats-App-Image-2026-05-24-at-6-21-16-PM.jpg",
+    "category": "Motors & Transformers"
   },
   {
     "name": "COUNTER ASSEMBLY",
     "price": 600,
     "stock": 24,
-    "image": "https://i.postimg.cc/v80DhPWW/Whats-App-Image-2026-05-24-at-12-01-47-PM.jpg"
+    "image": "https://i.postimg.cc/v80DhPWW/Whats-App-Image-2026-05-24-at-12-01-47-PM.jpg",
+    "category": "Assemblies"
   },
   {
     "name": "MIX VALUE IR SENSOR UP",
     "price": 600,
     "stock": 3,
-    "image": "https://i.postimg.cc/HLPggR5z/IR-Sensor-removebg-preview.png"
+    "image": "https://i.postimg.cc/HLPggR5z/IR-Sensor-removebg-preview.png",
+    "category": "Sensors"
   },
   {
     "name": "MIX VALUE LENGTH SENSOR",
     "price": 800,
     "stock": 2,
-    "image": "https://i.postimg.cc/CLd5Qj7w/Whats-App-Image-2026-05-25-at-8-21-36-AM.jpg"
+    "image": "https://i.postimg.cc/CLd5Qj7w/Whats-App-Image-2026-05-25-at-8-21-36-AM.jpg",
+    "category": "Sensors"
   },
   {
     "name": "MIX VALUE PCB",
     "price": 900,
     "stock": 1,
-    "image": "https://i.postimg.cc/66Pfv0VS/Mother-Board-VC-removebg-preview.png"
+    "image": "https://i.postimg.cc/66Pfv0VS/Mother-Board-VC-removebg-preview.png",
+    "category": "PCB & Mother Boards"
   },
   {
     "name": "SEMI VALUE PCB",
     "price": 700,
     "stock": 2,
-    "image": "https://i.postimg.cc/c1tXT2JN/Mother-Board-Sevi-Value-removebg-preview.png"
+    "image": "https://i.postimg.cc/c1tXT2JN/Mother-Board-Sevi-Value-removebg-preview.png",
+    "category": "PCB & Mother Boards"
   },
   {
     "name": "SOFTWARE UPDATE TOOL",
     "price": 900,
     "stock": 50,
-    "image": "https://i.postimg.cc/GtmtrY18/Whats-App-Image-2026-05-24-at-6-25-31-PM.jpg"
+    "image": "https://i.postimg.cc/GtmtrY18/Whats-App-Image-2026-05-24-at-6-25-31-PM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "SPINDLE MOTOR 25W 230V",
     "price": 1500,
     "stock": 2,
-    "image": "https://i.postimg.cc/HLbVtd2v/1d56e3a4-0a73-4cf7-bda9-b10651844406.jpg"
+    "image": "https://i.postimg.cc/HLbVtd2v/1d56e3a4-0a73-4cf7-bda9-b10651844406.jpg",
+    "category": "Motors & Transformers"
   },
   {
     "name": "BNC MOTHER BOARD 110/230V",
     "price": 1600,
     "stock": 50,
-    "image": "https://i.postimg.cc/mkgkRMG1/Whats-App-Image-2026-05-24-at-6-27-08-PM.jpg"
+    "image": "https://i.postimg.cc/mkgkRMG1/Whats-App-Image-2026-05-24-at-6-27-08-PM.jpg",
+    "category": "PCB & Mother Boards"
   },
   {
     "name": "BNC MOTHER BOARD GODREJ TYPES",
     "price": 2200,
     "stock": 10,
-    "image": "https://i.postimg.cc/zGpF5tY7/Whats-App-Image-2026-05-24-at-6-30-19-PM-removebg-preview.png"
+    "image": "https://i.postimg.cc/zGpF5tY7/Whats-App-Image-2026-05-24-at-6-30-19-PM-removebg-preview.png",
+    "category": "PCB & Mother Boards"
   },
   {
     "name": "HOPPER MOTOR 25W 230V",
     "price": 2300,
     "stock": 20,
-    "image": "https://i.postimg.cc/5t86mb3p/419a1d8d-3146-4fdc-ad6f-803a4dc7bd8e.jpg"
+    "image": "https://i.postimg.cc/5t86mb3p/419a1d8d-3146-4fdc-ad6f-803a4dc7bd8e.jpg",
+    "category": "Motors & Transformers"
   },
   {
     "name": "RUBBER BELT LNC",
     "price": 50,
     "stock": 190,
-    "image": "https://i.postimg.cc/9fKbdYZy/Samall-Belt.jpg"
+    "image": "https://i.postimg.cc/9fKbdYZy/Samall-Belt.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "RUBBER PAD 3.1MM",
     "price": 50,
     "stock": 225,
-    "image": "https://i.postimg.cc/nV3M2dv3/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"
+    "image": "https://i.postimg.cc/nV3M2dv3/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "RUBBER PAD 3.3MM",
     "price": 60,
     "stock": 400,
-    "image": "https://i.postimg.cc/Hnf6T4sn/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"
+    "image": "https://i.postimg.cc/Hnf6T4sn/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "AIR PIPE",
     "price": 80,
     "stock": 20,
-    "image": "https://i.postimg.cc/nV3M2dv3/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"
+    "image": "https://i.postimg.cc/nV3M2dv3/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "RUBBER BELT WHITE BNC",
     "price": 130,
     "stock": 106,
-    "image": "https://i.postimg.cc/bvb11cTK/Whats-App-Image-2026-05-24-at-12-05-47-PM.jpg"
+    "image": "https://i.postimg.cc/bvb11cTK/Whats-App-Image-2026-05-24-at-12-05-47-PM.jpg",
+    "category": "Rubber & Belts"
   },
   {
     "name": "UV TUBE 9W",
     "price": 150,
     "stock": 50,
-    "image": "https://i.postimg.cc/c1F6hDQM/Whats-App-Image-2026-05-24-at-12-07-38-PM.jpg"
+    "image": "https://i.postimg.cc/c1F6hDQM/Whats-App-Image-2026-05-24-at-12-07-38-PM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "WHITE TUBE 9W ",
     "price": 150,
     "stock": 12,
-    "image": "https://i.postimg.cc/L57Gy9N1/310tb91VNKL.jpg"
+    "image": "https://i.postimg.cc/L57Gy9N1/310tb91VNKL.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "AIR FILTER",
     "price": 200,
     "stock": 110,
-    "image": "https://i.postimg.cc/mkgkRMG3/Whats-App-Image-2026-05-24-at-6-34-35-PM.jpg"
+    "image": "https://i.postimg.cc/mkgkRMG3/Whats-App-Image-2026-05-24-at-6-34-35-PM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "BNC DISPLAY PANEL",
     "price": 700,
     "stock": 10,
-    "image": "https://postimg.cc/gallery/Mx8sV04"
+    "image": "https://postimg.cc/gallery/Mx8sV04",
+    "category": "Displays"
   },
   {
     "name": "GODRED BNC CUSTOMER DISPLAY",
     "price": 900,
     "stock": 20,
-    "image": "https://i.postimg.cc/vBMDqk2B/Whats-App-Image-2026-05-24-at-5-41-10-PM.jpg"
+    "image": "https://i.postimg.cc/vBMDqk2B/Whats-App-Image-2026-05-24-at-5-41-10-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC CUSTOMER DISPLAY 20PIN",
     "price": 700,
     "stock": 20,
-    "image": "https://i.postimg.cc/d1B3z6gJ/Whats-App-Image-2026-05-24-at-5-47-12-PM.jpg"
+    "image": "https://i.postimg.cc/d1B3z6gJ/Whats-App-Image-2026-05-24-at-5-47-12-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "GODREG MAIN DISPLAY ONLY",
     "price": 600,
     "stock": 20,
-    "image": "https://i.postimg.cc/gJDjfs12/Whats-App-Image-2026-05-24-at-5-56-19-PM.jpg"
+    "image": "https://i.postimg.cc/gJDjfs12/Whats-App-Image-2026-05-24-at-5-56-19-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC MAIN DISPLAY ONLY",
     "price": 500,
     "stock": 20,
-    "image": "https://i.postimg.cc/FRZz2pwz/Whats-App-Image-2026-05-24-at-5-56-42-PM.jpg"
+    "image": "https://i.postimg.cc/FRZz2pwz/Whats-App-Image-2026-05-24-at-5-56-42-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "2.8 INCH TFT DISPLAY",
     "price": 700,
     "stock": 20,
-    "image": "https://i.postimg.cc/vBzTphC1/Whats-App-Image-2026-05-24-at-6-09-48-PM.jpg"
+    "image": "https://i.postimg.cc/vBzTphC1/Whats-App-Image-2026-05-24-at-6-09-48-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "GODREJ DISPLAY PANEL",
     "price": 900,
     "stock": 10,
-    "image": "https://i.postimg.cc/1tHXLBbN/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg"
+    "image": "https://i.postimg.cc/1tHXLBbN/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "BNC DISPLAY PANEL",
     "price": 700,
     "stock": 5,
-    "image": "https://i.postimg.cc/Jnq09xSX/Whats-App-Image-2026-05-24-at-6-17-29-PM.jpg"
+    "image": "https://i.postimg.cc/Jnq09xSX/Whats-App-Image-2026-05-24-at-6-17-29-PM.jpg",
+    "category": "Displays"
   },
   {
     "name": "KEYPAD MIX VALUE",
     "price": 400,
     "stock": 20,
-    "image": "https://i.postimg.cc/Y2djRX6p/Whats-App-Image-2026-05-25-at-8-20-00-AM.jpg"
+    "image": "https://i.postimg.cc/Y2djRX6p/Whats-App-Image-2026-05-25-at-8-20-00-AM.jpg",
+    "category": "Keypads"
   },
   {
     "name": "KEYPAD FM-i10",
     "price": 400,
     "stock": 20,
-    "image": "https://i.postimg.cc/7YbhWg9v/Whats-App-Image-2026-05-25-at-8-20-24-AM.jpg"
+    "image": "https://i.postimg.cc/7YbhWg9v/Whats-App-Image-2026-05-25-at-8-20-24-AM.jpg",
+    "category": "Keypads"
   },
   {
     "name": "KEYPAD MIX VALYE 4KEY",
     "price": 150,
     "stock": 20,
-    "image": "https://i.postimg.cc/rFzsPSjc/Whats-App-Image-2026-05-25-at-8-20-38-AM.jpg"
+    "image": "https://i.postimg.cc/rFzsPSjc/Whats-App-Image-2026-05-25-at-8-20-38-AM.jpg",
+    "category": "Keypads"
   },
   {
     "name": "KEYPAD SEMI VALUE",
     "price": 400,
     "stock": 20,
-    "image": "https://i.postimg.cc/MKXHFy5q/Whats-App-Image-2026-05-25-at-8-21-03-AM.jpg"
+    "image": "https://i.postimg.cc/MKXHFy5q/Whats-App-Image-2026-05-25-at-8-21-03-AM.jpg",
+    "category": "Keypads"
   },
   {
     "name": "LED DISPLAY FM-i10",
     "price": 600,
     "stock": 20,
-    "image": "https://i.postimg.cc/PrNJRmyX/Whats-App-Image-2026-05-25-at-8-22-18-AM.jpg"
+    "image": "https://i.postimg.cc/PrNJRmyX/Whats-App-Image-2026-05-25-at-8-22-18-AM.jpg",
+    "category": "Displays"
   },
   {
     "name": "LCD SIDE  DISPALY MIX VALUE",
     "price": 600,
     "stock": 30,
-    "image": "https://i.postimg.cc/L6h5bzD8/Whats-App-Image-2026-05-25-at-8-22-50-AM.jpg"
+    "image": "https://i.postimg.cc/L6h5bzD8/Whats-App-Image-2026-05-25-at-8-22-50-AM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "BNC NIS PLATE",
     "price": 250,
     "stock": 20,
-    "image": "https://i.postimg.cc/ZK0nMrHd/Whats-App-Image-2026-05-25-at-8-24-39-AM.jpg"
+    "image": "https://i.postimg.cc/ZK0nMrHd/Whats-App-Image-2026-05-25-at-8-24-39-AM.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "9W WHITE TUBE",
     "price": 200,
     "stock": 10,
-    "image": "https://i.postimg.cc/VNXdFmRK/310tb91VNKL.jpg"
+    "image": "https://i.postimg.cc/VNXdFmRK/310tb91VNKL.jpg",
+    "category": "Consumables & Accessories"
   },
   {
     "name": "MX-50i CUSTOMER DISPLAY",
     "price": 800,
     "stock": 20,
-    "image": "https://i.postimg.cc/SNYMBNvD/Whats-App-Image-2026-05-24-at-5-42-37-PM.jpg"
+    "image": "https://i.postimg.cc/SNYMBNvD/Whats-App-Image-2026-05-24-at-5-42-37-PM.jpg",
+    "category": "Displays"
   }
 ]
