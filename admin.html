@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - HI-TECH ELECTRONIC PARTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#f8f9ff; padding:20px; }
+.container { max-width:1200px; margin:auto; }
+.header { background:#004aad; color:white; padding:20px; border-radius:12px; text-align:center; margin-bottom:20px; }
+.admin-content { background:white; padding:25px; border-radius:16px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
+.add-form { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:15px; margin:20px 0; padding:20px; background:#f0f4ff; border-radius:12px; }
+.product-row { display:grid; grid-template-columns:2fr 100px 100px 3fr 80px 80px; gap:10px; padding:12px; border-bottom:1px solid #eee; align-items:center; }
+button { padding:10px 16px; border:none; border-radius:8px; cursor:pointer; font-weight:600; }
+.save-btn { background:#28a745; color:white; }
+.delete-btn { background:#f44336; color:white; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>👨‍💼 ADMIN PANEL</h1>
+    <p>HI-TECH ELECTRONIC PARTS</p>
+  </div>
+
+  <div class="admin-content">
+    <div class="add-form">
+      <input type="text" id="newName" placeholder="Product Name">
+      <input type="number" id="newPrice" placeholder="Price ₹">
+      <input type="number" id="newStock" placeholder="Stock">
+      <input type="text" id="newImage" placeholder="Image URL">
+      <button onclick="addNewProduct()" style="background:#28a745;color:white;">Add New Product</button>
+      <button onclick="exportProducts()" style="background:#007bff;color:white;">Export JSON</button>
+    </div>
+
+    <div id="adminProductList"></div>
+  </div>
+</div>
+
+<script>
+// Load products
+let products = [];
+
+fetch('products.json')
+  .then(res => res.json())
+  .then(data => { products = data; renderAdmin(); })
+  .catch(() => alert("products.json file nahi mili!"));
+
+function renderAdmin() {
+  let html = `<div class="product-row" style="font-weight:600;background:#f0f0f0;">
+    <div>Name</div><div>Price</div><div>Stock</div><div>Image URL</div><div></div><div></div>
+  </div>`;
+
+  products.forEach((p, i) => {
+    html += `
+    <div class="product-row">
+      <input type="text" value="${p.name}" id="name${i}">
+      <input type="number" value="${p.price}" id="price${i}">
+      <input type="number" value="${p.stock}" id="stock${i}">
+      <input type="text" value="${p.image}" id="img${i}">
+      <button onclick="saveProduct(${i})" class="save-btn">Save</button>
+      <button onclick="deleteProduct(${i})" class="delete-btn">Delete</button>
+    </div>`;
+  });
+  document.getElementById('adminProductList').innerHTML = html;
+}
+
+function saveProduct(i) {
+  products[i].name = document.getElementById(`name${i}`).value;
+  products[i].price = +document.getElementById(`price${i}`).value;
+  products[i].stock = +document.getElementById(`stock${i}`).value;
+  products[i].image = document.getElementById(`img${i}`).value;
+  alert("Product Updated!");
+  renderAdmin();
+}
+
+function deleteProduct(i) {
+  if(confirm("Delete karna hai?")) {
+    products.splice(i,1);
+    renderAdmin();
+  }
+}
+
+function addNewProduct() {
+  const name = document.getElementById('newName').value.trim();
+  const price = +document.getElementById('newPrice').value;
+  const stock = +document.getElementById('newStock').value || 0;
+  const image = document.getElementById('newImage').value.trim();
+
+  if(!name || !price || !image) return alert("Sab fields bhariye!");
+
+  products.push({name, price, stock, image});
+  alert("New Product Added!");
+  renderAdmin();
+}
+
+function exportProducts() {
+  const json = JSON.stringify(products, null, 2);
+  const blob = new Blob([json], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'products.json';
+  a.click();
+  alert("products.json download ho gaya! GitHub pe upload kar do.");
+}
+</script>
+</body>
+</html>
