@@ -3,7 +3,7 @@
     "name": "SPRING COUNTER",
     "price": 20,
     "stock": 90,
-    "image": "https://postimg.cc/DJRnPS04"
+    "image": "https://i.postimg.cc/J0z0mJWx/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg"
   },
   {
     "name": "SPRING LOW TENSION",
@@ -33,7 +33,7 @@
     "name": "CAPACITOR 2.5UF",
     "price": 40,
     "stock": 120,
-    "image": "https://i.postimg.cc/KzXZdCt8/Whats-App-Image-2026-05-24-at-10-34-08-AM.jpg"
+    "image": "https://i.postimg.cc/Xq1JvJVh/Whats-App-Image-2026-05-24-at-10-34-08-AM.jpg"
   },
   {
     "name": "FRC CONNECTOR 10PIN",
@@ -57,13 +57,13 @@
     "name": "ROCKER SWITCH 16AMP",
     "price": 60,
     "stock": 9,
-    "image": "https://postimg.cc/zHW5tqHQ"
+    "image": "https://i.postimg.cc/sxHX2Xj3/Whats-App-Image-2026-05-24-at-10-50-49-AM.jpg"
   },
   {
     "name": "RESET SWITCH",
     "price": 100,
     "stock": 105,
-    "image": "https://postimg.cc/FkcmWhJQ"
+    "image": "https://i.postimg.cc/mkpDrDLh/Whats-App-Image-2026-05-24-at-10-59-08-AM.jpg"
   },
   {
     "name": "RUBBER WHEELS BASE",
@@ -87,7 +87,7 @@
     "name": "RUBBER WHEELS 6PCS",
     "price": 120,
     "stock": 5000,
-    "image": "https://postimg.cc/m1MRXTF4"
+    "image": "https://i.postimg.cc/VvZ6N6fJ/Whats-App-Image-2026-05-24-at-11-01-27-AM.jpg"
   },
   {
     "name": "RUBBER WITH BASE ",
@@ -141,7 +141,7 @@
     "name": "GODREJ BNC DISPLAY PANEL",
     "price": 600,
     "stock": 12,
-    "image": "https://i.postimg.cc/MT6M9xF0/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg"
+    "image": "https://i.postimg.cc/1tHXLBbN/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg"
   },
   {
     "name": "BNC DISPLAY PANEL",
@@ -160,12 +160,6 @@
     "price": 600,
     "stock": 15,
     "image": "https://i.postimg.cc/DzQM3dym/Whats-App-Image-2026-05-24-at-5-48-54-PM.jpg"
-  },
-  {
-    "name": "MIX VALUE CUSTOMER DISPLAY",
-    "price": 700,
-    "stock": 12,
-    "image": "https://via.placeholder.com/100"
   },
   {
     "name": "GODREJ BNC CUSTOMER DISPLAY",
@@ -197,7 +191,7 @@
     "stock": 15,
     "image": "https://i.postimg.cc/mDjZkHVz/a541d443-29eb-4027-ad32-48aa9df7bc34.jpg"
   },
-   {
+  {
     "name": "9VDC MOTOR",
     "price": 350,
     "stock": 3,
@@ -297,7 +291,7 @@
     "name": "AIR PIPE",
     "price": 80,
     "stock": 20,
-    "image": "https://i.postimg.cc/yxQjYD0d/IMG-20260524-165643.jpg"
+    "image": "https://i.postimg.cc/nV3M2dv3/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"
   },
   {
     "name": "RUBBER BELT WHITE BNC",
@@ -418,5 +412,11 @@
     "price": 200,
     "stock": 10,
     "image": "https://i.postimg.cc/VNXdFmRK/310tb91VNKL.jpg"
+  },
+  {
+    "name": "MX-50i CUSTOMER DISPLAY",
+    "price": 800,
+    "stock": 20,
+    "image": "https://i.postimg.cc/SNYMBNvD/Whats-App-Image-2026-05-24-at-5-42-37-PM.jpg"
   }
 ]
