@@ -8,7 +8,7 @@
   {
     "name": "SPRING LOW TENSION",
     "price": 30,
-    "stock": 0,
+    "stock": 10,
     "image": "https://i.postimg.cc/gJ6xhvH8/Whats-App-Image-2026-05-24-at-10-30-52-AM.jpg"
   },
   {
@@ -138,12 +138,6 @@
     "image": "https://i.postimg.cc/T2th0krN/Whats-App-Image-2026-05-24-at-12-49-45-PM.jpg"
   },
   {
-    "name": "MX-50i CUSTOMER DISPLAY",
-    "price": 600,
-    "stock": 23,
-    "image": "https://postimg.cc/gallery/Mx8sV04"
-  },
-  {
     "name": "GODREJ BNC DISPLAY PANEL",
     "price": 600,
     "stock": 12,
@@ -203,13 +197,7 @@
     "stock": 15,
     "image": "https://i.postimg.cc/mDjZkHVz/a541d443-29eb-4027-ad32-48aa9df7bc34.jpg"
   },
-  {
-    "name": "BNC DISPLAY GODREJ PCB ",
-    "price": 600,
-    "stock": 12,
-    "image": "https://i.postimg.cc/ZKGmTHZj/Whats-App-Image-2026-05-24-at-5-56-19-PM.jpg"
-  },
-  {
+   {
     "name": "9VDC MOTOR",
     "price": 350,
     "stock": 3,
