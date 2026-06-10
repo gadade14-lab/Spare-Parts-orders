@@ -28,7 +28,6 @@ border-radius:20px;
 color:white;
 margin-bottom:25px;
 box-shadow:0 8px 20px rgba(0,0,0,0.1);
-position:relative;
 }
 .header h1{
 font-size:34px;
@@ -277,17 +276,6 @@ font-size:40px;
 font-weight:bold;
 cursor:pointer;
 }
-.admin-link {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    padding: 12px 20px;
-    background: #ff5722;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
 @media(max-width:900px){
 .main-layout{grid-template-columns:1fr;}
 }
@@ -308,7 +296,6 @@ cursor:pointer;
 <div class="search-box">
 <input type="text" id="searchInput" placeholder="Search Products...">
 </div>
-<a href="admin.html" class="admin-link" target="_blank">👨‍💼 Admin Panel</a>
 </div>
 
 <div class="main-layout">
@@ -446,7 +433,6 @@ function removeItem(index){
 }
 
 function placeOrder(){
-  // Original placeOrder function
   let name = document.getElementById("customerName").value.trim();
   let address = document.getElementById("customerAddress").value.trim();
   let pin = document.getElementById("customerPincode").value.trim();
