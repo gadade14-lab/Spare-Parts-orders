@@ -3,30 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HI-TECH ELECTRONIC PARTS</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
-
 body{
 background:#eef3ff;
 padding:20px;
 }
-
 .container{
 max-width:1600px;
 margin:auto;
 }
-
 .header{
 background:linear-gradient(135deg,#004aad,#007bff);
 padding:25px;
@@ -34,21 +28,18 @@ border-radius:20px;
 color:white;
 margin-bottom:25px;
 box-shadow:0 8px 20px rgba(0,0,0,0.1);
+position:relative;
 }
-
 .header h1{
 font-size:34px;
 }
-
 .header p{
 margin-top:8px;
 opacity:0.9;
 }
-
 .search-box{
 margin-top:20px;
 }
-
 .search-box input{
 width:100%;
 padding:15px;
@@ -57,20 +48,17 @@ border-radius:12px;
 font-size:16px;
 outline:none;
 }
-
 .main-layout{
 display:grid;
 grid-template-columns:1fr 380px;
 gap:25px;
 align-items:start;
 }
-
 .products{
 display:flex;
 flex-direction:column;
 gap:15px;
 }
-
 .card{
 background:white;
 border-radius:18px;
@@ -83,18 +71,15 @@ justify-content:space-between;
 gap:20px;
 transition:0.2s;
 }
-
 .card:hover{
 border-color:#007bff;
 }
-
 .product-left{
 display:flex;
 align-items:center;
 gap:18px;
 flex:1;
 }
-
 .product-image img{
 width:95px;
 height:95px;
@@ -105,54 +90,44 @@ background:white;
 cursor:pointer;
 transition:0.3s;
 }
-
 .product-image img:hover{
 transform:scale(1.05);
 }
-
 .product-details{
 flex:1;
 }
-
 .product-name{
 font-size:18px;
 font-weight:600;
 color:#003b8e;
 margin-bottom:8px;
 }
-
 .product-price{
 font-size:24px;
 font-weight:700;
 color:#28a745;
 }
-
 .stock{
 margin-top:6px;
 font-size:14px;
 font-weight:600;
 }
-
 .in-stock{
 color:#28a745;
 }
-
 .out-stock{
 color:red;
 }
-
 .product-right{
 display:flex;
 align-items:center;
 gap:12px;
 }
-
 .qty-box{
 display:flex;
 align-items:center;
 gap:8px;
 }
-
 .qty-btn{
 width:38px;
 height:38px;
@@ -163,7 +138,6 @@ color:white;
 font-size:20px;
 cursor:pointer;
 }
-
 .qty-input{
 width:60px;
 text-align:center;
@@ -173,7 +147,6 @@ border:1px solid #ccc;
 font-size:15px;
 font-weight:bold;
 }
-
 .add-btn{
 padding:12px 18px;
 border:none;
@@ -184,21 +157,17 @@ font-size:15px;
 font-weight:600;
 cursor:pointer;
 }
-
 .add-btn:hover{
 background:#e68900;
 }
-
 .disabled-btn{
 background:#999 !important;
 cursor:not-allowed;
 }
-
 .side-panel{
 position:sticky;
 top:20px;
 }
-
 .customer-box{
 background:white;
 padding:20px;
@@ -206,12 +175,10 @@ border-radius:20px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 margin-bottom:20px;
 }
-
 .customer-box h2{
 color:#004aad;
 margin-bottom:15px;
 }
-
 .customer-box input,
 .customer-box textarea{
 width:100%;
@@ -221,40 +188,33 @@ border:1px solid #ccc;
 border-radius:10px;
 font-size:14px;
 }
-
 .customer-box textarea{
 resize:none;
 height:80px;
 }
-
 .cart{
 background:white;
 border-radius:20px;
 padding:20px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
-
 .cart h2{
 color:#004aad;
 margin-bottom:20px;
 }
-
 .cart-item{
 border-bottom:1px solid #eee;
 padding:15px 0;
 }
-
 .cart-item-name{
 font-weight:600;
 }
-
 .cart-item-details{
 display:flex;
 justify-content:space-between;
 align-items:center;
 margin-top:10px;
 }
-
 .remove-btn{
 background:red;
 color:white;
@@ -263,14 +223,12 @@ padding:6px 12px;
 border-radius:8px;
 cursor:pointer;
 }
-
 .total{
 margin-top:20px;
 font-size:28px;
 font-weight:700;
 color:#28a745;
 }
-
 .min-order{
 margin-top:10px;
 color:red;
@@ -278,7 +236,6 @@ font-size:14px;
 font-weight:600;
 text-align:center;
 }
-
 .order-btn{
 width:100%;
 margin-top:20px;
@@ -291,13 +248,11 @@ font-size:18px;
 font-weight:700;
 cursor:pointer;
 }
-
 .empty{
 text-align:center;
 color:#777;
 padding:30px 0;
 }
-
 .image-popup{
 position:fixed;
 top:0;
@@ -311,14 +266,12 @@ align-items:center;
 z-index:99999;
 padding:20px;
 }
-
 .image-popup img{
 max-width:95%;
 max-height:95%;
 border-radius:18px;
 background:white;
 }
-
 .close-popup{
 position:absolute;
 top:20px;
@@ -328,581 +281,354 @@ font-size:40px;
 font-weight:bold;
 cursor:pointer;
 }
-
+.admin-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding: 12px 20px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.admin-panel {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+}
+.admin-content {
+    background: white;
+    width: 95%;
+    max-width: 1100px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 25px;
+}
+.product-row {
+    display: grid;
+    grid-template-columns: 2fr 80px 80px 3fr 70px 70px;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+.add-product-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 12px;
+}
 @media(max-width:900px){
-
-.main-layout{
-grid-template-columns:1fr;
+.main-layout{grid-template-columns:1fr;}
+.side-panel{position:relative;}
 }
-
-.side-panel{
-position:relative;
-}
-
-}
-
 @media(max-width:700px){
-
-.card{
-flex-direction:column;
-align-items:flex-start;
+.card{flex-direction:column;align-items:flex-start;}
+.product-left{width:100%;}
+.product-right{width:100%;justify-content:space-between;}
 }
-
-.product-left{
-width:100%;
-}
-
-.product-right{
-width:100%;
-justify-content:space-between;
-}
-
-}
-
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
 <div class="header">
-
 <h1>HI-TECH ELECTRONIC PARTS</h1>
-
 <p>Electronic Parts Ordering System</p>
-
 <div class="search-box">
 <input type="text" id="searchInput" placeholder="Search Products...">
 </div>
-
+<button class="admin-btn" onclick="toggleAdminPanel()">👨‍💼 Manage Products</button>
 </div>
 
 <div class="main-layout">
-
 <div class="products" id="productList"></div>
 
 <div class="side-panel">
-
 <div class="customer-box">
-
 <h2>👤 Customer Details</h2>
-
 <input type="text" id="customerName" placeholder="Customer Name">
-
 <textarea id="customerAddress" placeholder="Customer Address"></textarea>
-
 <input type="text" id="customerPincode" placeholder="Pincode">
-
 <input type="text" id="customerState" placeholder="State">
-
 <input type="text" id="customerMobile" placeholder="Mobile Number">
-
 </div>
 
 <div class="cart">
-
 <h2>🛒 Order Cart</h2>
-
 <div id="cartItems">
-
-<div class="empty">
-No Products Added
+<div class="empty">No Products Added</div>
 </div>
-
-</div>
-
 <div class="total" id="total">₹0</div>
-
-<div class="min-order">
-Minimum Order Value ₹2000 Required
-</div>
-
-<button class="order-btn" onclick="placeOrder()">
-PLACE ORDER
-</button>
-
+<div class="min-order">Minimum Order Value ₹2000 Required</div>
+<button class="order-btn" onclick="placeOrder()">PLACE ORDER</button>
 </div>
 </div>
 </div>
 </div>
 
 <div id="imagePopup" class="image-popup">
-
 <span class="close-popup" onclick="closeImage()">✕</span>
-
 <img id="popupImg">
+</div>
 
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="admin-panel">
+<div class="admin-content">
+<h2>Manage Products (GitHub)</h2>
+<button onclick="toggleAdminPanel()" style="float:right;background:#f44336;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">Close</button>
+
+<div class="add-product-form">
+<input type="text" id="newName" placeholder="Product Name">
+<input type="number" id="newPrice" placeholder="Price ₹">
+<input type="number" id="newStock" placeholder="Stock">
+<input type="text" id="newImage" placeholder="Image URL">
+<button onclick="addNewProduct()" style="background:#28a745;color:white;">Add Product</button>
+<button onclick="exportProducts()" style="background:#007bff;color:white;">Export JSON for GitHub</button>
+</div>
+
+<div id="adminProductList"></div>
+</div>
 </div>
 
 <script>
-
-/* =========================
-PRODUCTS
-========================= */
-
-const products = [
-
-{name:"SPRING COUNTER",price:20,stock:90,image:"https://i.postimg.cc/4dXzXH1R/Whats-App-Image-2026-05-24-at-10-18-05-AM.jpg"},
-{name:"SPRING LOW TENSION",price:30,stock:10,image:"https://i.postimg.cc/gJ6xhvH8/Whats-App-Image-2026-05-24-at-10-30-52-AM.jpg"},
-{name:"LIMIT SWITCH SHORT ROLLER",price:35,stock:200,image:"https://i.postimg.cc/prFKPwS2/Whats-App-Image-2026-05-24-at-10-25-02-AM.jpg"},
-{name:"SPRING HIGH TENSION",price:40,stock:30,image:"https://i.postimg.cc/kGBR5Q6z/Whats-App-Image-2026-05-24-at-10-20-19-AM.jpg"},
-{name:"LIMIT SWITCH LONG ROLLER",price:200,stock:100,image:"https://i.postimg.cc/ncqqgt7j/Whats-App-Image-2026-05-24-at-10-25-25-AM.jpg"},
-{name:"CAPACITOR 2.5UF",price:40,stock:120,image:"https://i.postimg.cc/KzXZdCt8/Whats-App-Image-2026-05-24-at-10-34-08-AM.jpg"},
-{name:"FRC CONNECTOR 10PIN",price:40,stock:50,image:"https://i.postimg.cc/3JwHb3zj/Whats-App-Image-2026-05-24-at-10-36-14-AM.jpg"},
-{name:"DIAPHRAGM",price:50,stock:20,image:"https://i.postimg.cc/WzZjS8dD/DAIPHARGM.png"},
-{name:"FRC CONNECTOR 20PIN",price:50,stock:15,image:"https://i.postimg.cc/66vHWgnt/Whats-App-Image-2026-05-24-at-10-48-51-AM.jpg"},
-{name:"ROCKER SWITCH 16AMP",price:60,stock:9,image:"https://i.postimg.cc/PqygMcK0/Whats-App-Image-2026-05-24-at-10-50-49-AM.jpg"},
-
-{name:"RESET SWITCH",price:100,stock:105,image:"https://i.postimg.cc/1z0m1JBH/Whats-App-Image-2026-05-24-at-10-59-08-AM.jpg"},
-{name:"RUBBER WHEELS BASE",price:30,stock:300,image:"https://i.postimg.cc/HWJdzY5D/Rubber-Wheels-Base.jpg"},
-{name:"CARBAN VANCE 28*16*3MM",price:80,stock:70,image:"https://i.postimg.cc/mgrKVV1T/Whats-App-Image-2026-05-24-at-12-55-31-PM.jpg"},
-{name:"ENCODER WHEELS",price:100,stock:4,image:"https://i.postimg.cc/K8BfFMM6/Encoder-Wheels-removebg-preview.png"},
-{name:"RUBBER WHEELS 6PCS",price:120,stock:5000,image:"https://i.postimg.cc/C5Rp5NG4/Whats-App-Image-2026-05-24-at-11-01-27-AM.jpg"},
-{name:"RUBBER WITH BASE ",price:50,stock:300,image:"https://i.postimg.cc/9FrVxW7z/Rubber-Wheels-With-Base-removebg-preview.png"},
-{name:"COUNTER SENSOR WITH CONNECTOR",price:130,stock:80,image:"https://i.postimg.cc/K8897zkn/Whats-App-Image-2026-05-24-at-12-01-47-PM.jpg"},
-{name:"ENCODER SENSOR",price:150,stock:66,image:"https://i.postimg.cc/MG090QZy/Encoder-Sensor-removebg-preview.png"},
-{name:"STACKER SENSOR",price:150,stock:105,image:"https://i.postimg.cc/7hmm28V7/Whats-App-Image-2026-05-24-at-12-58-11-PM.jpg"},
-{name:"HOPPER SENSOR",price:150,stock:200,image:"https://i.postimg.cc/zDWZxWT9/Whats-App-Image-2026-05-24-at-6-07-00-PM.jpg"},
-{name:"MG SENSOR",price:350,stock:60,image:"https://i.postimg.cc/kgTQ7v5f/MG-Sensor-removebg-preview.png"},
-{name:"COLOUR SENSOR",price:850,stock:50,image:"https://i.postimg.cc/nhvZqXq2/Colour-Sensor.jpg"},
-
-{name:"TFT DISPLAY CONNECTOR 5PIN",price:20,stock:10,image:"https://i.postimg.cc/kgXPzqZc/Whats-App-Image-2026-05-24-at-12-53-34-PM.jpg"},
-{name:"MX-50i CUSTOMER DISPLAY",price:600,stock:23,image:"https://i.postimg.cc/DZHjqCCJ/Whats-App-Image-2026-05-24-at-5-42-37-PM.jpg"},
-{name:"GODREJ BNC DISPLAY PANEL",price:600,stock:12,image:"https://i.postimg.cc/MT6M9xF0/Whats-App-Image-2026-05-24-at-6-13-41-PM.jpg"},
-{name:"BNC DISPLAY PANEL",price:600,stock:10,image:"https://i.postimg.cc/mkFbw5Bc/Whats-App-Image-2026-05-24-at-6-16-08-PM.jpg"},
-{name:"BNC DISPLAY PANEL",price:600,stock:14,image:"https://i.postimg.cc/KjL1zzkS/Whats-App-Image-2026-05-24-at-6-17-29-PM.jpg"},
-{name:"BNC CUSTOMER DISPLAY ",price:600,stock:15,image:"https://i.postimg.cc/DzQM3dym/Whats-App-Image-2026-05-24-at-5-48-54-PM.jpg"},
-{name:"MIX VALUE CUSTOMER DISPLAY",price:700,stock:12,image:"https://via.placeholder.com/100"},
-{name:"GODREJ BNC CUSTOMER DISPLAY",price:700,stock:11,image:"https://i.postimg.cc/HLPBgZ16/Whats-App-Image-2026-05-24-at-5-41-10-PM.jpg"},
-{name:"SEMI VALUE LCD DISPLAY",price:700,stock:53,image:"https://i.postimg.cc/jSHHBYpH/LCD-Display-removebg-preview.png"},
-{name:'TFT DISPLAY 2.8"',price:800,stock:14,image:"https://i.postimg.cc/rwZrByh3/TFT-Display-removebg-preview.png"},
-{name:'TFT DISPLAY 3.5"',price:1200,stock:12,image:"https://i.postimg.cc/4d6P9Jh9/Whats-App-Image-2026-05-24-at-6-09-48-PM.jpg"},
-{name:"BNC DISPLAY PCB ",price:600,stock:15,image:"https://i.postimg.cc/mDjZkHVz/a541d443-29eb-4027-ad32-48aa9df7bc34.jpg"},
-{name:"BNC DISPLAY GODREJ PCB ",price:600,stock:12,image:"https://i.postimg.cc/ZKGmTHZj/Whats-App-Image-2026-05-24-at-5-56-19-PM.jpg"},
-
-{name:"9VDC MOTOR",price:350,stock:3,image:"https://i.postimg.cc/d1Z5Tyyq/9VDC-Motor-removebg-preview.png"},
-{name:"TRANSFORMER LNC",price:350,stock:5,image:"https://i.postimg.cc/W4R2FQt3/Transformer-removebg-preview.png"},
-{name:"TRANSFORMER BNC",price:550,stock:2,image:"https://i.postimg.cc/C1b0nfN2/Whats-App-Image-2026-05-24-at-6-21-16-PM.jpg"},
-{name:"COUNTER ASSEMBLY",price:600,stock:4,image:"https://i.postimg.cc/c49pHmWG/Whats-App-Image-2026-05-24-at-6-23-02-PM.jpg"},
-{name:"MIX VALUE IR SENSOR UP",price:600,stock:3,image:"https://i.postimg.cc/HLPggR5z/IR-Sensor-removebg-preview.png"},
-{name:"MIX VALUE LENGTH SENSOR",price:800,stock:2,image:"https://i.postimg.cc/ZYWD20wt/Lenth-Sensor-removebg-preview.png"},
-{name:"MIX VALUE PCB",price:900,stock:1,image:"https://i.postimg.cc/66Pfv0VS/Mother-Board-VC-removebg-preview.png"},
-{name:"SEMI VALUE PCB",price:700,stock:2,image:"https://i.postimg.cc/c1tXT2JN/Mother-Board-Sevi-Value-removebg-preview.png"},
-{name:"SOFTWARE UPDATE TOOL",price:900,stock:5,image:"https://i.postimg.cc/ZK2w2DZN/Whats-App-Image-2026-05-24-at-6-25-31-PM.jpg"},
-{name:"SPINDLE MOTOR 25W 230V",price:1500,stock:2,image:"https://i.postimg.cc/pdShc2WD/1d56e3a4-0a73-4cf7-bda9-b10651844406.jpg"},
-{name:"BNC MOTHER BOARD 110/230V",price:1600,stock:10,image:"https://i.postimg.cc/0NcDRbmZ/Whats-App-Image-2026-05-24-at-6-28-41-PM.jpg"},
-{name:"BNC MOTHER BOARD GODREJ TYPES",price:2200,stock:10,image:"https://i.postimg.cc/zGpF5tY7/Whats-App-Image-2026-05-24-at-6-30-19-PM-removebg-preview.png"},
-{name:"HOPPER MOTOR 25W 230V",price:2300,stock:20,image:"https://i.postimg.cc/J0LhS098/419a1d8d-3146-4fdc-ad6f-803a4dc7bd8e.png"},
-
-{name:"RUBBER BELT LNC",price:50,stock:190,image:"https://i.postimg.cc/9fKbdYZy/Samall-Belt.jpg"},
-{name:"RUBBER PAD 3.1MM",price:50,stock:225,image:"https://i.postimg.cc/Hnf6T4sn/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"},
-{name:"RUBBER PAD 3.3MM",price:60,stock:400,image:"https://i.postimg.cc/Hnf6T4sn/Whats-App-Image-2026-05-24-at-12-27-56-PM.jpg"},
-{name:"AIR PIPE",price:80,stock:20,image:"https://i.postimg.cc/yxQjYD0d/IMG-20260524-165643.jpg"},
-{name:"RUBBER BELT WHITE BNC",price:130,stock:106,image:"https://i.postimg.cc/bvb11cTK/Whats-App-Image-2026-05-24-at-12-05-47-PM.jpg"},
-{name:"UV TUBE 9W",price:150,stock:50,image:"https://i.postimg.cc/7YdC9tbQ/Whats-App-Image-2026-05-24-at-12-07-38-PM.jpg"},
-{name:"WHITE TUBE 9W ",price:150,stock:12,image:"https://i.postimg.cc/L57Gy9N1/310tb91VNKL.jpg"},
-{name:"AIR FILTER",price:200,stock:110,image:"https://i.postimg.cc/LscYML5B/Whats-App-Image-2026-05-24-at-6-34-35-PM.jpg"}
-
-];
-
-
+// Global Variables
+let products = [];
 let cart = [];
 
 const productList = document.getElementById("productList");
 const cartItems = document.getElementById("cartItems");
 const totalBox = document.getElementById("total");
 
-/* =========================
-RENDER PRODUCTS
-========================= */
+// Load products from products.json
+fetch('products.json')
+  .then(response => response.json())
+  .then(data => {
+    products = data;
+    renderProducts();
+  })
+  .catch(err => {
+    console.error(err);
+    alert("products.json file nahi mili! GitHub pe products.json upload karo.");
+  });
 
+// Render Products
 function renderProducts(search=""){
-
-let html = "";
-
-products
-.filter(product =>
-product.name.toLowerCase().includes(search.toLowerCase())
-)
-
-.forEach((product,index)=>{
-
-html += `
-
-<div class="card">
-
-<div class="product-left">
-
-<div class="product-image">
-<img src="${product.image}" onclick="openImage('${product.image}')">
-</div>
-
-<div class="product-details">
-
-<div class="product-name">
-${product.name}
-</div>
-
-<div class="product-price">
-₹${product.price}
-</div>
-
-${
-product.stock > 0
-?
-`<div class="stock in-stock">
-Available Stock : ${product.stock}
-</div>`
-:
-`<div class="stock out-stock">
-❌ OUT OF STOCK
-</div>`
+  let html = "";
+  products.filter(product => 
+    product.name.toLowerCase().includes(search.toLowerCase())
+  ).forEach((product, index) => {
+    html += `
+    <div class="card">
+      <div class="product-left">
+        <div class="product-image">
+          <img src="${product.image}" onclick="openImage('${product.image}')">
+        </div>
+        <div class="product-details">
+          <div class="product-name">${product.name}</div>
+          <div class="product-price">₹${product.price}</div>
+          ${product.stock > 0 ? 
+            `<div class="stock in-stock">Available Stock : ${product.stock}</div>` : 
+            `<div class="stock out-stock">❌ OUT OF STOCK</div>`
+          }
+        </div>
+      </div>
+      <div class="product-right">
+        <div class="qty-box">
+          <button class="qty-btn" onclick="decreaseQty(${index})">-</button>
+          <input type="number" class="qty-input" id="qty${index}" value="1" min="1" max="${product.stock}">
+          <button class="qty-btn" onclick="increaseQty(${index})">+</button>
+        </div>
+        ${product.stock > 0 ? 
+          `<button class="add-btn" onclick="addToCart(${index})">ADD</button>` : 
+          `<button class="add-btn disabled-btn" disabled>OUT OF STOCK</button>`
+        }
+      </div>
+    </div>`;
+  });
+  productList.innerHTML = html;
 }
 
-</div>
-</div>
-
-<div class="product-right">
-
-<div class="qty-box">
-
-<button class="qty-btn"
-onclick="decreaseQty(${index})">
--
-</button>
-
-<input type="number"
-class="qty-input"
-id="qty${index}"
-value="1"
-min="1"
-max="${product.stock}">
-
-<button class="qty-btn"
-onclick="increaseQty(${index})">
-+
-</button>
-
-</div>
-
-${
-product.stock > 0
-?
-`<button class="add-btn"
-onclick="addToCart(${index})">
-ADD
-</button>`
-:
-`<button class="add-btn disabled-btn" disabled>
-OUT OF STOCK
-</button>`
-}
-
-</div>
-</div>
-
-`;
-
-});
-
-productList.innerHTML = html;
-
-}
-
-/* =========================
-IMAGE POPUP
-========================= */
-
-function openImage(image){
-
-document.getElementById("imagePopup").style.display = "flex";
-
-document.getElementById("popupImg").src = image;
-
-}
-
-function closeImage(){
-
-document.getElementById("imagePopup").style.display = "none";
-
-}
-
-/* =========================
-QTY FUNCTIONS
-========================= */
+// All other functions (openImage, qty, cart, placeOrder, etc.) remain same as original
+function openImage(image){ document.getElementById("imagePopup").style.display = "flex"; document.getElementById("popupImg").src = image; }
+function closeImage(){ document.getElementById("imagePopup").style.display = "none"; }
 
 function increaseQty(index){
-
-let qty = document.getElementById(`qty${index}`);
-
-let current = parseInt(qty.value);
-
-if(current < products[index].stock){
-
-qty.value = current + 1;
-
+  let qty = document.getElementById(`qty${index}`);
+  let current = parseInt(qty.value);
+  if(current < products[index].stock) qty.value = current + 1;
 }
-
-}
-
 function decreaseQty(index){
-
-let qty = document.getElementById(`qty${index}`);
-
-if(parseInt(qty.value) > 1){
-
-qty.value = parseInt(qty.value) - 1;
-
+  let qty = document.getElementById(`qty${index}`);
+  if(parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
 }
-
-}
-
-/* =========================
-ADD TO CART
-========================= */
 
 function addToCart(index){
+  const product = products[index];
+  if(product.stock <= 0) return alert("Product Out Of Stock");
+  let qty = parseInt(document.getElementById(`qty${index}`).value);
+  if(qty > product.stock) return alert("Only " + product.stock + " Stock Available");
 
-const product = products[index];
-
-if(product.stock <= 0){
-
-alert("Product Out Of Stock");
-
-return;
-
+  const existing = cart.find(item => item.name === product.name);
+  if(existing){
+    if(existing.qty + qty > product.stock) return alert("Stock Limit Exceeded");
+    existing.qty += qty;
+  } else {
+    cart.push({name:product.name, price:product.price, qty:qty});
+  }
+  renderCart();
 }
-
-let qty = parseInt(
-document.getElementById(`qty${index}`).value
-);
-
-if(qty > product.stock){
-
-alert("Only " + product.stock + " Stock Available");
-
-return;
-
-}
-
-const existing = cart.find(item =>
-item.name === product.name
-);
-
-let alreadyQty = existing ? existing.qty : 0;
-
-if(alreadyQty + qty > product.stock){
-
-alert("Stock Limit Exceeded");
-
-return;
-
-}
-
-if(existing){
-
-existing.qty += qty;
-
-}else{
-
-cart.push({
-name:product.name,
-price:product.price,
-qty:qty
-});
-
-}
-
-renderCart();
-
-}
-
-/* =========================
-RENDER CART
-========================= */
 
 function renderCart(){
-
-if(cart.length === 0){
-
-cartItems.innerHTML = `
-<div class="empty">
-No Products Added
-</div>
-`;
-
-totalBox.innerHTML = "₹0";
-
-return;
-
+  if(cart.length === 0){
+    cartItems.innerHTML = `<div class="empty">No Products Added</div>`;
+    totalBox.innerHTML = "₹0";
+    return;
+  }
+  let total = 0;
+  let cartHTML = "";
+  cart.forEach((item, index) => {
+    let subTotal = item.price * item.qty;
+    total += subTotal;
+    cartHTML += `
+    <div class="cart-item">
+      <div class="cart-item-name">${item.name}</div>
+      <div class="cart-item-details">
+        <div>Qty : ${item.qty}<br>₹${subTotal}</div>
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      </div>
+    </div>`;
+  });
+  cartItems.innerHTML = cartHTML;
+  totalBox.innerHTML = `₹${total}`;
 }
-
-let total = 0;
-let cartHTML = "";
-
-cart.forEach((item,index)=>{
-
-let subTotal = item.price * item.qty;
-
-total += subTotal;
-
-cartHTML += `
-
-<div class="cart-item">
-
-<div class="cart-item-name">
-${item.name}
-</div>
-
-<div class="cart-item-details">
-
-<div>
-Qty : ${item.qty}<br>
-₹${subTotal}
-</div>
-
-<button class="remove-btn"
-onclick="removeItem(${index})">
-Remove
-</button>
-
-</div>
-</div>
-
-`;
-
-});
-
-cartItems.innerHTML = cartHTML;
-
-totalBox.innerHTML = `₹${total}`;
-
-}
-
-/* =========================
-REMOVE ITEM
-========================= */
 
 function removeItem(index){
-
-cart.splice(index,1);
-
-renderCart();
-
+  cart.splice(index,1);
+  renderCart();
 }
-
-/* =========================
-PLACE ORDER
-========================= */
 
 function placeOrder(){
+  // (Original placeOrder function same rakha hai)
+  let customerName = document.getElementById("customerName").value.trim();
+  let customerAddress = document.getElementById("customerAddress").value.trim();
+  let customerPincode = document.getElementById("customerPincode").value.trim();
+  let customerState = document.getElementById("customerState").value.trim();
+  let customerMobile = document.getElementById("customerMobile").value.trim();
 
-let customerName =
-document.getElementById("customerName").value.trim();
+  if(!customerName || !customerAddress || !customerPincode || !customerState || !customerMobile){
+    return alert("Please Fill Customer Details");
+  }
+  if(cart.length === 0) return alert("Please Add Products");
 
-let customerAddress =
-document.getElementById("customerAddress").value.trim();
+  let total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  if(total < 2000) return alert("Minimum Order Value Must Be ₹2000");
 
-let customerPincode =
-document.getElementById("customerPincode").value.trim();
+  let message = "🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A" +
+    "👤 CUSTOMER DETAILS%0A%0A" +
+    "Name : " + customerName + "%0A" +
+    "Address : " + customerAddress + "%0A" +
+    "Pincode : " + customerPincode + "%0A" +
+    "State : " + customerState + "%0A" +
+    "Mobile : " + customerMobile + "%0A%0A" +
+    "📦 ORDER DETAILS%0A%0A";
 
-let customerState =
-document.getElementById("customerState").value.trim();
+  cart.forEach(item => {
+    let sub = item.price * item.qty;
+    message += "Product : " + item.name + "%0AQty : " + item.qty + "%0APrice : ₹" + sub + "%0A%0A";
+  });
+  message += "💰 TOTAL : ₹" + total;
 
-let customerMobile =
-document.getElementById("customerMobile").value.trim();
-
-if(
-customerName == "" ||
-customerAddress == "" ||
-customerPincode == "" ||
-customerState == "" ||
-customerMobile == ""
-){
-
-alert("Please Fill Customer Details");
-
-return;
-
+  let phone = "918208825986";
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
 
-if(cart.length === 0){
-
-alert("Please Add Products");
-
-return;
-
+// Admin Functions
+function toggleAdminPanel(){
+  const panel = document.getElementById('adminPanel');
+  panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+  if(panel.style.display === 'flex') renderAdminProducts();
 }
 
-let total = 0;
+function renderAdminProducts(){
+  let html = `<div class="product-row" style="font-weight:600;background:#f0f0f0;">
+    <div>Name</div><div>Price</div><div>Stock</div><div>Image URL</div><div></div><div></div>
+  </div>`;
+  products.forEach((p, i) => {
+    html += `
+    <div class="product-row">
+      <input type="text" value="${p.name}" id="name${i}">
+      <input type="number" value="${p.price}" id="price${i}">
+      <input type="number" value="${p.stock}" id="stock${i}">
+      <input type="text" value="${p.image}" id="img${i}">
+      <button onclick="saveProduct(${i})" style="background:#007bff;color:white;">Save</button>
+      <button onclick="deleteProduct(${i})" style="background:#f44336;color:white;">Delete</button>
+    </div>`;
+  });
+  document.getElementById('adminProductList').innerHTML = html;
+}
 
-cart.forEach(item=>{
-total += item.price * item.qty;
+function saveProduct(i){
+  products[i].name = document.getElementById(`name${i}`).value;
+  products[i].price = parseInt(document.getElementById(`price${i}`).value) || 0;
+  products[i].stock = parseInt(document.getElementById(`stock${i}`).value) || 0;
+  products[i].image = document.getElementById(`img${i}`).value;
+  alert("✅ Product Updated!");
+  renderProducts(document.getElementById("searchInput").value);
+  renderAdminProducts();
+}
+
+function deleteProduct(i){
+  if(confirm("Delete this product?")){
+    products.splice(i,1);
+    alert("Product Deleted");
+    renderProducts(document.getElementById("searchInput").value);
+    renderAdminProducts();
+  }
+}
+
+function addNewProduct(){
+  const name = document.getElementById('newName').value.trim();
+  const price = parseInt(document.getElementById('newPrice').value);
+  const stock = parseInt(document.getElementById('newStock').value) || 0;
+  const image = document.getElementById('newImage').value.trim();
+  if(!name || !price || !image) return alert("Name, Price aur Image URL bhariye!");
+  products.push({name, price, stock, image});
+  alert("✅ New Product Added!");
+  document.getElementById('newName').value = '';
+  document.getElementById('newPrice').value = '';
+  document.getElementById('newStock').value = '';
+  document.getElementById('newImage').value = '';
+  renderProducts(document.getElementById("searchInput").value);
+  renderAdminProducts();
+}
+
+function exportProducts(){
+  const jsonStr = JSON.stringify(products, null, 2);
+  const blob = new Blob([jsonStr], {type: "application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "products.json";
+  a.click();
+  alert("✅ products.json download ho gaya! Ise GitHub pe upload / replace kar do.");
+}
+
+// Search
+document.getElementById("searchInput").addEventListener("input", function(){
+  renderProducts(this.value);
 });
-
-if(total < 2000){
-
-alert("Minimum Order Value Must Be ₹2000");
-
-return;
-
-}
-
-let message =
-"🛒 HI-TECH ELECTRONIC PARTS ORDER%0A%0A";
-
-message +=
-"👤 CUSTOMER DETAILS%0A%0A" +
-"Name : " + customerName + "%0A" +
-"Address : " + customerAddress + "%0A" +
-"Pincode : " + customerPincode + "%0A" +
-"State : " + customerState + "%0A" +
-"Mobile : " + customerMobile + "%0A%0A";
-
-message += "📦 ORDER DETAILS%0A%0A";
-
-cart.forEach(item=>{
-
-let sub = item.price * item.qty;
-
-message +=
-"Product : " + item.name + "%0A" +
-"Qty : " + item.qty + "%0A" +
-"Price : ₹" + sub + "%0A%0A";
-
-});
-
-message += "💰 TOTAL : ₹" + total;
-
-let phone = "918208825986";
-
-window.open(
-`https://wa.me/${phone}?text=${message}`,
-"_blank"
-);
-
-}
-
-/* =========================
-SEARCH
-========================= */
-
-document
-.getElementById("searchInput")
-.addEventListener("input",function(){
-
-renderProducts(this.value);
-
-});
-
-/* =========================
-INITIAL LOAD
-========================= */
-
-renderProducts();
-
 </script>
-
 </body>
 </html>
